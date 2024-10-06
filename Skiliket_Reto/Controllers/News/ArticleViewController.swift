@@ -35,6 +35,9 @@ class ArticleViewController: UIViewController {
         
         commentLabel1.text = article!.comments[0].content
         commentLabel2.text = article!.comments[1].content
+        
+        commentLabel1.sizeToFit()
+        commentLabel2.sizeToFit()
     }
     
 
