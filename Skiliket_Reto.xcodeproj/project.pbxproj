@@ -19,6 +19,7 @@
 		0706D45D2CB0CEB800642708 /* ResponderUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0706D45C2CB0CEB700642708 /* ResponderUtils.swift */; };
 		072A84492CB22818006C8FE0 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A84482CB22818006C8FE0 /* NewsFeedViewController.swift */; };
 		072A844B2CB22C55006C8FE0 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A844A2CB22C55006C8FE0 /* NewsArticle.swift */; };
+		072A844D2CB31C0A006C8FE0 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A844C2CB31C0A006C8FE0 /* ArticleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0706D45C2CB0CEB700642708 /* ResponderUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderUtils.swift; sourceTree = "<group>"; };
 		072A84482CB22818006C8FE0 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		072A844A2CB22C55006C8FE0 /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
+		072A844C2CB31C0A006C8FE0 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				072A84482CB22818006C8FE0 /* NewsFeedViewController.swift */,
+				072A844C2CB31C0A006C8FE0 /* ArticleViewController.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				072A844B2CB22C55006C8FE0 /* NewsArticle.swift in Sources */,
 				0706D4422CAF660100642708 /* ViewController.swift in Sources */,
 				0706D43E2CAF660100642708 /* AppDelegate.swift in Sources */,
+				072A844D2CB31C0A006C8FE0 /* ArticleViewController.swift in Sources */,
 				0706D4402CAF660100642708 /* SceneDelegate.swift in Sources */,
 				072A84492CB22818006C8FE0 /* NewsFeedViewController.swift in Sources */,
 			);

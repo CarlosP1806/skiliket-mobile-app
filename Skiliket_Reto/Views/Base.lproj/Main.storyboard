@@ -218,11 +218,11 @@
             <objects>
                 <viewController id="opL-ae-p14" customClass="NewsFeedViewController" customModule="Skiliket_Reto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aGg-u9-6Iw">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="803"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a6p-Yi-Io0">
-                                <rect key="frame" x="0.0" y="156" width="393" height="647"/>
+                                <rect key="frame" x="0.0" y="144" width="393" height="659"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="articleCell" rowHeight="300" id="MyG-R2-mG2" customClass="ArticleCell" customModule="Skiliket_Reto" customModuleProvider="target">
@@ -287,6 +287,7 @@
                                             <outlet property="articleImageView" destination="n4I-pC-TqI" id="UAd-IE-MvU"/>
                                             <outlet property="articleTitleLabel" destination="DCw-3X-4w8" id="LGU-LP-2VE"/>
                                             <outlet property="articleView" destination="Qbg-7D-umt" id="Rty-kd-slJ"/>
+                                            <segue destination="gL7-xJ-L1q" kind="show" id="jyO-VJ-em6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -296,7 +297,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cr-at-BfW">
-                                <rect key="frame" x="30" y="56" width="363" height="41"/>
+                                <rect key="frame" x="30" y="44" width="363" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -323,12 +324,67 @@
             </objects>
             <point key="canvasLocation" x="3859" y="-330"/>
         </scene>
+        <!--Article View Controller-->
+        <scene sceneID="ick-OM-zZj">
+            <objects>
+                <viewController id="gL7-xJ-L1q" customClass="ArticleViewController" customModule="Skiliket_Reto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="TNq-BS-NUO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="803"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6G-qs-dCo">
+                                <rect key="frame" x="0.0" y="44" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="weC-UJ-zz8">
+                                        <rect key="frame" x="0.0" y="0.0" width="385" height="1517.6666666666667"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="article_banner_3" translatesAutoresizingMaskIntoConstraints="NO" id="Jfq-EJ-DTz">
+                                                <rect key="frame" x="72" y="40" width="240" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="article_banner_1" translatesAutoresizingMaskIntoConstraints="NO" id="6vX-eN-tvl">
+                                                <rect key="frame" x="72" y="595" width="240" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1500" id="qtx-Dg-2wY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="weC-UJ-zz8" secondAttribute="bottom" id="4WT-fX-Vw6"/>
+                                    <constraint firstItem="weC-UJ-zz8" firstAttribute="top" secondItem="p6G-qs-dCo" secondAttribute="top" id="UCL-1e-kSZ"/>
+                                    <constraint firstItem="weC-UJ-zz8" firstAttribute="leading" secondItem="p6G-qs-dCo" secondAttribute="leading" id="p4N-Je-IEj"/>
+                                    <constraint firstAttribute="trailing" secondItem="weC-UJ-zz8" secondAttribute="trailing" id="rGC-po-k1p"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bJM-VO-Fcn"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p6G-qs-dCo" firstAttribute="top" secondItem="bJM-VO-Fcn" secondAttribute="top" id="8yw-al-B9I"/>
+                            <constraint firstItem="p6G-qs-dCo" firstAttribute="trailing" secondItem="bJM-VO-Fcn" secondAttribute="trailing" id="YJu-fE-ibU"/>
+                            <constraint firstItem="weC-UJ-zz8" firstAttribute="width" secondItem="TNq-BS-NUO" secondAttribute="width" multiplier="0.979644" id="Zcj-5O-ufk"/>
+                            <constraint firstItem="p6G-qs-dCo" firstAttribute="bottom" secondItem="bJM-VO-Fcn" secondAttribute="bottom" id="ef6-eC-LUH"/>
+                            <constraint firstItem="p6G-qs-dCo" firstAttribute="leading" secondItem="bJM-VO-Fcn" secondAttribute="leading" id="nzc-bJ-etE"/>
+                            <constraint firstItem="weC-UJ-zz8" firstAttribute="height" secondItem="TNq-BS-NUO" secondAttribute="height" multiplier="1.78147" id="yTt-ie-MlU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zT8-fY-UJL"/>
+                    <size key="freeformSize" width="393" height="852"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Lv-Jt-uvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4826.7175572519081" y="-330.28169014084511"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="AxY-FT-gvh">
             <objects>
                 <viewController id="TQ6-zJ-y6Y" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N2B-dl-9bO">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPB-OI-IT6">
@@ -355,7 +411,7 @@
             <objects>
                 <viewController id="CJb-B6-XNB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dNx-UR-5uz">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXP-uh-Fh1">
@@ -380,10 +436,10 @@
             <objects>
                 <tabBarController modalPresentationStyle="fullScreen" id="J8h-nR-Zng" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uTq-MA-cct"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mIc-oF-RA4">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="mIc-oF-RA4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="systemGreenColor"/>
                     </tabBar>
                     <connections>
@@ -422,7 +478,7 @@
             <objects>
                 <viewController id="1JN-xv-CQt" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8KZ-uT-lnr">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="5fR-Q4-TrM"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -438,7 +494,7 @@
             <objects>
                 <viewController id="KQa-97-5iO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dsb-OJ-oi3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="FwO-8m-ZIu"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -455,9 +511,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZBo-NO-TsU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" image="newspaper.fill" catalog="system" id="nyk-ls-VNy"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bKc-Bs-JEs">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="bKc-Bs-JEs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemGreenColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -528,7 +586,7 @@
             <objects>
                 <viewController id="lz8-xI-02i" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gkF-MX-NTC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="W29-Je-oqE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -563,6 +621,8 @@
         <segue reference="NcO-kh-BEe"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="article_banner_1" width="1920" height="1180"/>
+        <image name="article_banner_3" width="311" height="162"/>
         <image name="chart.xyaxis.line" catalog="system" width="128" height="102"/>
         <image name="hammer.circle.fill" catalog="system" width="128" height="123"/>
         <image name="network" catalog="system" width="128" height="123"/>

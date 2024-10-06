@@ -67,5 +67,6 @@ class ArticleCell: UITableViewCell {
         articleImageView.image = UIImage(named: imageUrl)
         
         articleView.layer.cornerRadius = 20
+        articleView.layer.masksToBounds = true
     }
 }
