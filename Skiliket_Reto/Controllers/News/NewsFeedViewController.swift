@@ -42,15 +42,18 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let nextView = segue.destination as! ArticleViewController
+        let index = newsTableView.indexPathForSelectedRow?.row
+        guard let index = index else {
+            return
+        }
+        let article = articles[index]
+        nextView.article = article
     }
-    */
+    
 
 }
 
