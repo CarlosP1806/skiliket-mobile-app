@@ -20,6 +20,8 @@
 		072943732CB3717E007A73A4 /* ArticleModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072943722CB3717E007A73A4 /* ArticleModalViewController.swift */; };
 		072A84492CB22818006C8FE0 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A84482CB22818006C8FE0 /* NewsFeedViewController.swift */; };
 		072A844B2CB22C55006C8FE0 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A844A2CB22C55006C8FE0 /* NewsArticle.swift */; };
+		6134AE222CB2E560002FD3CF /* ListProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134AE212CB2E560002FD3CF /* ListProjectsViewController.swift */; };
+		6134AE242CB2E744002FD3CF /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134AE232CB2E744002FD3CF /* Project.swift */; };
 		072A844D2CB31C0A006C8FE0 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A844C2CB31C0A006C8FE0 /* ArticleViewController.swift */; };
 		07CCC6D52CB385D7004C5C12 /* ReportArticleModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCC6D42CB385D7004C5C12 /* ReportArticleModalViewController.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		072943722CB3717E007A73A4 /* ArticleModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModalViewController.swift; sourceTree = "<group>"; };
 		072A84482CB22818006C8FE0 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		072A844A2CB22C55006C8FE0 /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
+		6134AE212CB2E560002FD3CF /* ListProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsViewController.swift; sourceTree = "<group>"; };
+		6134AE232CB2E744002FD3CF /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		072A844C2CB31C0A006C8FE0 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		07CCC6D42CB385D7004C5C12 /* ReportArticleModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportArticleModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				072A844A2CB22C55006C8FE0 /* NewsArticle.swift */,
+				6134AE232CB2E744002FD3CF /* Project.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		0706D4532CAF661E00642708 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6134AE202CB2E536002FD3CF /* Project */,
 				072A84472CB22805006C8FE0 /* News */,
 				0706D4562CB0C2A600642708 /* Login */,
 				0706D43D2CAF660100642708 /* AppDelegate.swift */,
@@ -140,6 +146,14 @@
 				07CCC6D42CB385D7004C5C12 /* ReportArticleModalViewController.swift */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		6134AE202CB2E536002FD3CF /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				6134AE212CB2E560002FD3CF /* ListProjectsViewController.swift */,
+			);
+			path = Project;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,10 +235,12 @@
 				072A844B2CB22C55006C8FE0 /* NewsArticle.swift in Sources */,
 				0706D4422CAF660100642708 /* ViewController.swift in Sources */,
 				0706D43E2CAF660100642708 /* AppDelegate.swift in Sources */,
+				6134AE242CB2E744002FD3CF /* Project.swift in Sources */,
 				072943732CB3717E007A73A4 /* ArticleModalViewController.swift in Sources */,
 				072A844D2CB31C0A006C8FE0 /* ArticleViewController.swift in Sources */,
 				0706D4402CAF660100642708 /* SceneDelegate.swift in Sources */,
 				072A84492CB22818006C8FE0 /* NewsFeedViewController.swift in Sources */,
+				6134AE222CB2E560002FD3CF /* ListProjectsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
