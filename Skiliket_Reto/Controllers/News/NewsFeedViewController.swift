@@ -11,9 +11,14 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var newsTableView: UITableView!
     var articles = [Article]()
+    var showPublishSuccessToast = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(showPublishSuccessToast) {
+            self.showToast(message: "Published Article", font: .systemFont(ofSize: 12.0))
+        }
         
         Task {
             do {
@@ -40,6 +45,25 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         cell.configure(title: currentArticle.title, description: currentArticle.preview, imageUrl: currentArticle.bannerName, author: currentArticle.author.name, date: currentArticle.date, location: currentArticle.location)
         
         return cell
+    }
+    
+    func showToast(message : String, font: UIFont) {
+        
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-150, width: 150, height: 35))
+        toastLabel.backgroundColor = UIColor.systemGreen.withAlphaComponent(1.0)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = font
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 6.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
     }
 
     
