@@ -19,6 +19,7 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var commentsView: UIView!
     @IBOutlet weak var commentLabel1: UILabel!
     @IBOutlet weak var commentLabel2: UILabel!
+    @IBOutlet weak var shareButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,9 @@ class ArticleViewController: UIViewController {
         
         commentLabel1.sizeToFit()
         commentLabel2.sizeToFit()
+        
+        shareButton.imageView?.contentMode = .scaleAspectFit
+
     }
     
 
