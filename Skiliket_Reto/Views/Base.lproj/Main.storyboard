@@ -728,7 +728,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ute-dk-UrY">
-                                <rect key="frame" x="37" y="270" width="320" height="216"/>
+                                <rect key="frame" x="36.666666666666657" y="270" width="320" height="216"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the reason for the report" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AC-KF-hqm">
                                 <rect key="frame" x="77.666666666666686" y="244" width="238" height="21"/>
@@ -1121,8 +1121,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ggd-FI-ahW"/>
-        <segue reference="uQ1-ag-lnc"/>
+        <segue reference="hvW-LI-1dy"/>
+        <segue reference="pbQ-Au-KuK"/>
         <segue reference="NcO-kh-BEe"/>
     </inferredMetricsTieBreakers>
     <resources>
