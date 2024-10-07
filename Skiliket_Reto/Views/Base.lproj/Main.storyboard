@@ -281,21 +281,52 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehe-nL-r5X">
+                                                            <rect key="frame" x="152.33333333333334" y="325.66666666666669" width="48.333333333333343" height="34.333333333333314"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain">
+                                                                <imageReference key="image" image="square.and.arrow.up.fill" catalog="system" symbolScale="large"/>
+                                                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </buttonConfiguration>
+                                                            <connections>
+                                                                <segue destination="mfE-V2-HRN" kind="presentation" id="uQ1-ag-lnc"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vQ-8K-X0l">
+                                                            <rect key="frame" x="95.333333333333329" y="325" width="46.999999999999986" height="35"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="bookmark.fill" catalog="system">
+                                                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjU-8Z-ggz">
+                                                            <rect key="frame" x="210.66666666666666" y="325" width="48.999999999999972" height="35"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="flag.fill" catalog="system">
+                                                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </buttonConfiguration>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="6Hp-dC-dl1" firstAttribute="top" secondItem="14y-wl-e4w" secondAttribute="bottom" constant="12" id="9Ps-KH-t6x"/>
+                                                        <constraint firstAttribute="bottom" secondItem="yjU-8Z-ggz" secondAttribute="bottom" constant="8" id="APu-dS-r3i"/>
                                                         <constraint firstItem="14y-wl-e4w" firstAttribute="leading" secondItem="Qbg-7D-umt" secondAttribute="leading" constant="8" id="B6g-ps-lkG"/>
                                                         <constraint firstItem="DCw-3X-4w8" firstAttribute="leading" secondItem="Qbg-7D-umt" secondAttribute="leading" constant="8" id="BKH-Mf-hCo"/>
                                                         <constraint firstItem="qLO-29-op6" firstAttribute="top" secondItem="DCw-3X-4w8" secondAttribute="bottom" constant="8" id="BdA-2L-LUP"/>
                                                         <constraint firstAttribute="trailing" secondItem="n4I-pC-TqI" secondAttribute="trailing" id="FKq-og-mh8"/>
                                                         <constraint firstItem="n4I-pC-TqI" firstAttribute="top" secondItem="Qbg-7D-umt" secondAttribute="top" id="IFA-1L-7r1"/>
                                                         <constraint firstItem="qLO-29-op6" firstAttribute="leading" secondItem="Qbg-7D-umt" secondAttribute="leading" constant="8" id="IkS-DJ-MR7"/>
+                                                        <constraint firstItem="ehe-nL-r5X" firstAttribute="centerX" secondItem="Qbg-7D-umt" secondAttribute="centerX" id="Js2-Tf-pOA"/>
                                                         <constraint firstItem="6Hp-dC-dl1" firstAttribute="leading" secondItem="Qbg-7D-umt" secondAttribute="leading" constant="8" id="Jsm-g0-Oa3"/>
                                                         <constraint firstItem="14y-wl-e4w" firstAttribute="top" secondItem="qLO-29-op6" secondAttribute="bottom" constant="8" id="KdY-R0-wZR"/>
                                                         <constraint firstAttribute="trailing" secondItem="14y-wl-e4w" secondAttribute="trailing" constant="8" id="L7F-uM-SnJ"/>
+                                                        <constraint firstItem="yjU-8Z-ggz" firstAttribute="leading" secondItem="ehe-nL-r5X" secondAttribute="trailing" constant="10" id="PDZ-bh-TDI"/>
                                                         <constraint firstItem="Koo-Wr-8nh" firstAttribute="top" secondItem="DCw-3X-4w8" secondAttribute="bottom" constant="8" id="Rvk-7f-0ap"/>
                                                         <constraint firstAttribute="trailing" secondItem="DCw-3X-4w8" secondAttribute="trailing" constant="8" id="W4B-tN-EXj"/>
+                                                        <constraint firstItem="ehe-nL-r5X" firstAttribute="leading" secondItem="9vQ-8K-X0l" secondAttribute="trailing" constant="10" id="fYa-nX-7N9"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ehe-nL-r5X" secondAttribute="bottom" constant="8" id="paw-bU-zg0"/>
+                                                        <constraint firstAttribute="bottom" secondItem="9vQ-8K-X0l" secondAttribute="bottom" constant="8" id="tVN-In-8Aj"/>
                                                         <constraint firstItem="DCw-3X-4w8" firstAttribute="top" secondItem="n4I-pC-TqI" secondAttribute="bottom" constant="12" id="two-Qe-qQD"/>
                                                         <constraint firstAttribute="trailing" secondItem="Koo-Wr-8nh" secondAttribute="trailing" constant="8" id="x2R-2a-mv8"/>
                                                         <constraint firstItem="n4I-pC-TqI" firstAttribute="leading" secondItem="Qbg-7D-umt" secondAttribute="leading" id="x40-oV-y0h"/>
@@ -319,7 +350,7 @@
                                             <outlet property="articleLocationLabel" destination="qLO-29-op6" id="gbA-WP-dlW"/>
                                             <outlet property="articleTitleLabel" destination="DCw-3X-4w8" id="LGU-LP-2VE"/>
                                             <outlet property="articleView" destination="Qbg-7D-umt" id="Rty-kd-slJ"/>
-                                            <segue destination="gL7-xJ-L1q" kind="show" id="jyO-VJ-em6"/>
+                                            <segue destination="gL7-xJ-L1q" kind="show" identifier="articleDetailSegue" id="jyO-VJ-em6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -907,6 +938,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="uQ1-ag-lnc"/>
         <segue reference="NcO-kh-BEe"/>
     </inferredMetricsTieBreakers>
     <resources>

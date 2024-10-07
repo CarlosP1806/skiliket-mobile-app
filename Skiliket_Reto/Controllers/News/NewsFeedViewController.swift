@@ -45,16 +45,16 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextView = segue.destination as! ArticleViewController
-        let index = newsTableView.indexPathForSelectedRow?.row
-        guard let index = index else {
-            return
+        if(segue.identifier == "articleDetailSegue") {
+            let nextView = segue.destination as! ArticleViewController
+            let index = newsTableView.indexPathForSelectedRow?.row
+            guard let index = index else {
+                return
+            }
+            let article = articles[index]
+            nextView.article = article
         }
-        let article = articles[index]
-        nextView.article = article
     }
-    
-
 }
 
 class ArticleCell: UITableViewCell {
