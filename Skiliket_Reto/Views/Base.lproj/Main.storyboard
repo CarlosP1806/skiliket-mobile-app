@@ -537,8 +537,8 @@
                         <viewLayoutGuide key="safeArea" id="bJM-VO-Fcn"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ycS-Xp-cph" firstAttribute="height" secondItem="TNq-BS-NUO" secondAttribute="height" multiplier="1.61893" id="1t3-dx-jPI"/>
                             <constraint firstItem="ycS-Xp-cph" firstAttribute="width" secondItem="TNq-BS-NUO" secondAttribute="width" id="3lQ-nG-I3V"/>
-                            <constraint firstItem="ycS-Xp-cph" firstAttribute="height" secondItem="TNq-BS-NUO" secondAttribute="height" multiplier="1.61893" id="Ah1-ab-kY2"/>
                             <constraint firstItem="p6G-qs-dCo" firstAttribute="trailing" secondItem="bJM-VO-Fcn" secondAttribute="trailing" id="L5O-z3-RBW"/>
                             <constraint firstItem="p6G-qs-dCo" firstAttribute="bottom" secondItem="bJM-VO-Fcn" secondAttribute="bottom" id="Lou-ko-WlA"/>
                             <constraint firstItem="p6G-qs-dCo" firstAttribute="top" secondItem="bJM-VO-Fcn" secondAttribute="top" id="hAU-7X-yUv"/>
