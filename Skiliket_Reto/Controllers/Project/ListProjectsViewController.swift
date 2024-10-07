@@ -11,6 +11,7 @@ import UIKit
 class ListProjectsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var projectTableView: UITableView!
+    
 
     var projects = [Project]()
 
@@ -33,6 +34,7 @@ class ListProjectsController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return projects.count
     }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -44,15 +46,22 @@ class ListProjectsController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showDetailedProject" {
+            let nextView = segue.destination as! DetailedProjectViewController
+            let index = projectTableView.indexPathForSelectedRow?.row
+            guard let index = index else {
+                return
+            }
+            let project = projects[index]
+            nextView.project = project
+        }
     }
-    */
+
+
+ 
+
+
 
 }
 
@@ -79,4 +88,6 @@ class ProjectCell: UITableViewCell {
         
         //projectView.layer.cornerRadius = 20
     }
+    
 }
+
