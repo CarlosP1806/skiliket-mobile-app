@@ -14,29 +14,22 @@ import Foundation
 
 // MARK: - Profile
 class Profile: Codable {
-    let profile: ProfileClass
-
-    init(profile: ProfileClass) {
-        self.profile = profile
-    }
-}
-
-// MARK: - ProfileClass
-class ProfileClass: Codable {
-    let username, userID: String
+    let username, userID, profileImage: String
     let contactInfo: ContactInfo
     let stats: Stats
 
     enum CodingKeys: String, CodingKey {
         case username
         case userID = "user_id"
+        case profileImage = "profile_image"
         case contactInfo = "contact_info"
         case stats
     }
 
-    init(username: String, userID: String, contactInfo: ContactInfo, stats: Stats) {
+    init(username: String, userID: String, profileImage: String, contactInfo: ContactInfo, stats: Stats) {
         self.username = username
         self.userID = userID
+        self.profileImage = profileImage
         self.contactInfo = contactInfo
         self.stats = stats
     }
@@ -69,8 +62,9 @@ class Stats: Codable {
     }
 }
 
-extension ProfileClass {
-    static func fetchProfile() async throws -> ProfileClass {
+
+extension Profile {
+    static func fetchProfile() async throws -> Profile {
         let urlComponents = URLComponents(string: "http://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo4/profile.json")!
         
         let (data, response) = try await URLSession.shared.data(from: urlComponents.url!)
@@ -79,7 +73,7 @@ extension ProfileClass {
         }
         
         let decoder = JSONDecoder()
-        let profileData = try decoder.decode(ProfileClass.self, from: data)
+        let profileData = try decoder.decode(Profile.self, from: data)
         
         return profileData
     }

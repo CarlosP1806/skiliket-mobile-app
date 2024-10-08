@@ -1670,10 +1670,10 @@
             </objects>
             <point key="canvasLocation" x="2902" y="1094"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="OXA-bM-r9L">
             <objects>
-                <viewController id="lz8-xI-02i" sceneMemberID="viewController">
+                <viewController id="lz8-xI-02i" customClass="ProfileViewController" customModule="Skiliket_Reto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gkF-MX-NTC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1821,6 +1821,17 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="bbe-e4-9sE"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="Le7-nQ-fgU" id="DgD-e1-0qu"/>
+                        <outlet property="emailLabel" destination="JVL-yj-Dqc" id="1Uj-LL-dAf"/>
+                        <outlet property="enrolledProjectsLabel" destination="tvs-5p-duE" id="16d-vU-N3g"/>
+                        <outlet property="phoneLabel" destination="RYF-vc-9Ng" id="SI5-nJ-eYF"/>
+                        <outlet property="profileImageView" destination="kxq-mx-fdY" id="BbK-A4-hrJ"/>
+                        <outlet property="publishedNewsLabel" destination="OPq-xw-jsh" id="eLp-i7-B6h"/>
+                        <outlet property="titleLabel" destination="fbZ-19-GxY" id="OOp-1Z-dAP"/>
+                        <outlet property="userIDLabel" destination="9La-We-iVD" id="Q4i-mZ-RbF"/>
+                        <outlet property="usernameLabel" destination="GAl-4o-laa" id="iRp-yp-Ch7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10C-5n-99C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1847,7 +1858,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eig-GI-4Kr"/>
         <segue reference="ggd-FI-ahW"/>
         <segue reference="uQ1-ag-lnc"/>
         <segue reference="AjV-Qf-vNi"/>

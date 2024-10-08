@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		07CCC6D52CB385D7004C5C12 /* ReportArticleModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCC6D42CB385D7004C5C12 /* ReportArticleModalViewController.swift */; };
 		07CCC6D72CB3A282004C5C12 /* CreateArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCC6D62CB3A282004C5C12 /* CreateArticleViewController.swift */; };
 		5B442B732CB4B4B200B15CE6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B442B722CB4B4B200B15CE6 /* Profile.swift */; };
+		5B442B7A2CB5EBC500B15CE6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B442B792CB5EBC500B15CE6 /* ProfileViewController.swift */; };
 		6134AE222CB2E560002FD3CF /* ListProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134AE212CB2E560002FD3CF /* ListProjectsViewController.swift */; };
 		6134AE242CB2E744002FD3CF /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134AE232CB2E744002FD3CF /* Project.swift */; };
 		6134AE262CB4269D002FD3CF /* DetailedProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134AE252CB4269D002FD3CF /* DetailedProjectViewController.swift */; };
@@ -51,16 +52,13 @@
 		07CCC6D42CB385D7004C5C12 /* ReportArticleModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportArticleModalViewController.swift; sourceTree = "<group>"; };
 		07CCC6D62CB3A282004C5C12 /* CreateArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateArticleViewController.swift; sourceTree = "<group>"; };
 		5B442B722CB4B4B200B15CE6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		5B442B792CB5EBC500B15CE6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6134AE212CB2E560002FD3CF /* ListProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsViewController.swift; sourceTree = "<group>"; };
 		6134AE232CB2E744002FD3CF /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		6134AE252CB4269D002FD3CF /* DetailedProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedProjectViewController.swift; sourceTree = "<group>"; };
 		6134AE292CB44946002FD3CF /* CreateReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportViewController.swift; sourceTree = "<group>"; };
 		6134AE2B2CB450EB002FD3CF /* CreateProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		5B442B742CB5E19F00B15CE6 /* Profile */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Profile; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0706D4372CAF660100642708 /* Frameworks */ = {
@@ -125,7 +123,7 @@
 		0706D4532CAF661E00642708 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5B442B742CB5E19F00B15CE6 /* Profile */,
+				5B442B7C2CB5EC8800B15CE6 /* Profile */,
 				6134AE202CB2E536002FD3CF /* Project */,
 				072A84472CB22805006C8FE0 /* News */,
 				0706D4562CB0C2A600642708 /* Login */,
@@ -165,6 +163,14 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		5B442B7C2CB5EC8800B15CE6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5B442B792CB5EBC500B15CE6 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		6134AE202CB2E536002FD3CF /* Project */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,9 +196,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				5B442B742CB5E19F00B15CE6 /* Profile */,
 			);
 			name = Skiliket_Reto;
 			productName = Skiliket_Reto;
@@ -252,6 +255,7 @@
 			files = (
 				6134AE2C2CB450EB002FD3CF /* CreateProjectViewController.swift in Sources */,
 				0706D45A2CB0C93B00642708 /* LoginViewController.swift in Sources */,
+				5B442B7A2CB5EBC500B15CE6 /* ProfileViewController.swift in Sources */,
 				07CCC6D72CB3A282004C5C12 /* CreateArticleViewController.swift in Sources */,
 				07CCC6D52CB385D7004C5C12 /* ReportArticleModalViewController.swift in Sources */,
 				0706D4582CB0C2C800642708 /* InitialViewController.swift in Sources */,
