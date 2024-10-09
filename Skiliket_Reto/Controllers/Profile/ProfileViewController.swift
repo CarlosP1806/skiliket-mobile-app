@@ -59,5 +59,18 @@ class ProfileViewController: UIViewController {
             // Fallback if the image is not found
             profileImageView.image = UIImage(systemName: "person.crop.circle")
         }
+
     }
+    
+    
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toEditProfile" {
+            let editVC = segue.destination as? EditProfileViewController
+            editVC?.profile = self.profile  // Pass the profile data to the edit screen
+            editVC?.profileImage = self.profileImageView.image
+        }
+    }
+
 }
