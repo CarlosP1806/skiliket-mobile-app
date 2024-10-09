@@ -1919,6 +1919,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-st-SAC">
+                                        <rect key="frame" x="55" y="88" width="46" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="camera.badge.ellipsis.fill" catalog="system" title="" cornerStyle="capsule">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="editPhotoTapped:" destination="P7A-sZ-2eM" eventType="touchUpInside" id="bZp-tu-X7w"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -1940,6 +1953,7 @@
                     <navigationItem key="navigationItem" id="KMM-KY-4uS"/>
                     <connections>
                         <outlet property="addressTextField" destination="sER-Sc-BGT" id="SHh-dT-8kz"/>
+                        <outlet property="editPhotoButton" destination="2qH-st-SAC" id="Ow6-5B-93d"/>
                         <outlet property="emailTextField" destination="b7U-nw-6Zw" id="by5-uH-2Km"/>
                         <outlet property="phoneTextField" destination="B33-YV-0an" id="3Pf-HN-Rqi"/>
                         <outlet property="profileContainerView" destination="PFE-Xr-mY7" id="zGP-jn-BFt"/>
@@ -1982,6 +1996,7 @@
     <resources>
         <image name="article_banner_3" width="311" height="162"/>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
+        <image name="camera.badge.ellipsis.fill" catalog="system" width="128" height="95"/>
         <image name="chart.xyaxis.line" catalog="system" width="128" height="102"/>
         <image name="flag.fill" catalog="system" width="128" height="121"/>
         <image name="hammer.circle.fill" catalog="system" width="128" height="123"/>
@@ -2002,6 +2017,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

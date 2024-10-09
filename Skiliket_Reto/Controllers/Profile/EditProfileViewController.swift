@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController, UITextFieldDelegate {
+class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // MARK: - Outlets
     @IBOutlet weak var profileImageViewEdit: UIImageView!
@@ -17,6 +17,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var profileContainerView: UIView!
+    @IBOutlet weak var editPhotoButton: UIButton!
     
     // Variables to hold the profile and the image passed from ProfileViewController
     var profile: Profile?
@@ -86,6 +87,28 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
     // Dismiss the keyboard when tapping outside of the text fields
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+
+    // MARK: - Edit Photo Action
+    @IBAction func editPhotoTapped(_ sender: UIButton) {
+        // Create and present an image picker to choose an image from the gallery
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true  // Allow the user to edit the selected image (crop, etc.)
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+
+    // MARK: - UIImagePickerControllerDelegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // Get the edited image (or the original if no editing was done)
+        if let editedImage = info[.editedImage] as? UIImage {
+            profileImageViewEdit.image = editedImage  // Set the new image temporarily
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            profileImageViewEdit.image = originalImage
+        }
+
+        picker.dismiss(animated: true, completion: nil)  // Dismiss the image picker
     }
 
 
