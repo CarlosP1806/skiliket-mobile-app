@@ -11,12 +11,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var enrolledProjectsLabel: UILabel!
     @IBOutlet weak var publishedNewsLabel: UILabel!
+    @IBOutlet weak var profileContainerView: UIView!
 
     var profile: Profile?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Round the corners of the profileContainerView (UIView)
+        profileContainerView.layer.cornerRadius = 20  
+        profileContainerView.layer.masksToBounds = true
+        
         // Fetch the profile data asynchronously
         Task {
             do {
