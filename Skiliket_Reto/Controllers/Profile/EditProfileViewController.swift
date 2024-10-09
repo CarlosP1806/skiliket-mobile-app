@@ -25,7 +25,10 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Ensure profileImageViewEdit is circular
+        makeProfileImageViewCircular()
+        
         // Set the profile view to be rounded
         profileContainerView.layer.cornerRadius = 20  // Adjust the radius as needed
         profileContainerView.layer.masksToBounds = true
@@ -78,6 +81,14 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         }
     }
     
+    // Make profileImageView circular by adjusting cornerRadius dynamically
+    func makeProfileImageViewCircular() {
+        let minDimension = min(profileImageViewEdit.frame.size.width, profileImageViewEdit.frame.size.height)
+        profileImageViewEdit.layer.cornerRadius = minDimension / 2
+        profileImageViewEdit.clipsToBounds = true
+        profileImageViewEdit.contentMode = .scaleAspectFill
+    }
+    
     // Dismiss the keyboard when tapping "Done"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // Hide the keyboard
@@ -107,7 +118,10 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         } else if let originalImage = info[.originalImage] as? UIImage {
             profileImageViewEdit.image = originalImage
         }
-
+        
+        // Ensure the image stays circular after selection
+        makeProfileImageViewCircular()
+        
         picker.dismiss(animated: true, completion: nil)  // Dismiss the image picker
     }
 
