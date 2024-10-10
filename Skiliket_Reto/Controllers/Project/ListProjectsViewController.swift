@@ -55,6 +55,10 @@ class ListProjectsController: UIViewController, UITableViewDelegate, UITableView
             }
             let project = projects[index]
             nextView.project = project
+        }else if segue.identifier == "createProject" {
+            print("Segue to Create Project is triggered")
+            let nextVC = segue.destination as! CreateProjectViewController
+            
         }
     }
 

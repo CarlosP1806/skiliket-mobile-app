@@ -41,6 +41,13 @@ class DetailedProjectViewController: UIViewController {
                 } else {
                     detailedImageView.image = nil // O puedes establecer una imagen por defecto
                 }
+        if let activeSensors = project?.sensors.active {
+            detailedProjectSensors.text = activeSensors.joined(separator: "\n") // Une los elementos con un salto de línea
+        } else {
+            detailedProjectSensors.text = "Sin datos"
+        }
+
+
     }
     
 
