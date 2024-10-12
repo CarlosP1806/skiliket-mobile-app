@@ -24,7 +24,7 @@ class NetworkHostsViewController: UIViewController, UITableViewDelegate, UITable
                 let tokenPTT = try await Welcome.getToken()
                 let hostList = try await Welcome.getHosts(token: tokenPTT!)
                 self.hosts = hostList
-                hostTableView.reloadData()                
+                hostTableView.reloadData()
             } catch {
                 print("Error fetching hosts")
             }
