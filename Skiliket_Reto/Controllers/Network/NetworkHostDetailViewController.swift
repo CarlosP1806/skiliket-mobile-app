@@ -1,5 +1,5 @@
 //
-//  NetworkOverviewViewController.swift
+//  NetworkHostDetailViewController.swift
 //  Skiliket_Reto
 //
 //  Created by Carlos Alberto Paez De la Cruz on 11/10/24.
@@ -7,21 +7,24 @@
 
 import UIKit
 
-class NetworkOverviewViewController: UIViewController {
-
-    @IBOutlet weak var summaryView: UIView!
+class NetworkHostDetailViewController: UIViewController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
-    }
+    var host: Response?
+    
+    
+    @IBOutlet weak var hostnameLabel: UILabel!
+    @IBOutlet weak var macLabel: UILabel!
+    @IBOutlet weak var ipLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        summaryView.layer.cornerRadius = 30.0
+        self.navigationController?.isNavigationBarHidden = false
+
+        hostnameLabel.text = host!.hostName
+        macLabel.text = "MAC: \(host!.hostMAC)"
+        ipLabel.text = "IP: \(host!.hostIP)"
     }
     
-
     /*
     // MARK: - Navigation
 

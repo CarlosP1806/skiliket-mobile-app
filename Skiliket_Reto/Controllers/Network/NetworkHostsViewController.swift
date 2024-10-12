@@ -14,9 +14,14 @@ class NetworkHostsViewController: UIViewController, UITableViewDelegate, UITable
 
     @IBOutlet weak var summaryView: UIView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         summaryView.layer.cornerRadius = 30.0
         
         Task {
@@ -46,21 +51,20 @@ class NetworkHostsViewController: UIViewController, UITableViewDelegate, UITable
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let nextView = segue.destination as! NetworkHostDetailViewController
+        let index = hostTableView.indexPathForSelectedRow?.row
+        guard let index = index else {
+            return
+        }
+        let host = hosts[index]
+        nextView.host = host
     }
-    */
-
 }
-
-
-
-
 
 class HostCell: UITableViewCell {
     

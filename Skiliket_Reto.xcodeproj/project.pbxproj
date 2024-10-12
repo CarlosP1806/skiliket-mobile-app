@@ -25,6 +25,7 @@
 		075810E12CB9F93500BF44A1 /* NetworkHostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075810E02CB9F93500BF44A1 /* NetworkHostsViewController.swift */; };
 		075810E42CB9FC6F00BF44A1 /* TicketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075810E32CB9FC6F00BF44A1 /* TicketResponse.swift */; };
 		075810E62CB9FC8C00BF44A1 /* HostJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075810E52CB9FC8C00BF44A1 /* HostJSON.swift */; };
+		075810E82CBA121300BF44A1 /* NetworkHostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075810E72CBA121300BF44A1 /* NetworkHostDetailViewController.swift */; };
 		07CCC6D52CB385D7004C5C12 /* ReportArticleModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCC6D42CB385D7004C5C12 /* ReportArticleModalViewController.swift */; };
 		07CCC6D72CB3A282004C5C12 /* CreateArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCC6D62CB3A282004C5C12 /* CreateArticleViewController.swift */; };
 		5B442B732CB4B4B200B15CE6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B442B722CB4B4B200B15CE6 /* Profile.swift */; };
@@ -60,6 +61,7 @@
 		075810E02CB9F93500BF44A1 /* NetworkHostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHostsViewController.swift; sourceTree = "<group>"; };
 		075810E32CB9FC6F00BF44A1 /* TicketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketResponse.swift; sourceTree = "<group>"; };
 		075810E52CB9FC8C00BF44A1 /* HostJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostJSON.swift; sourceTree = "<group>"; };
+		075810E72CBA121300BF44A1 /* NetworkHostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHostDetailViewController.swift; sourceTree = "<group>"; };
 		07CCC6D42CB385D7004C5C12 /* ReportArticleModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportArticleModalViewController.swift; sourceTree = "<group>"; };
 		07CCC6D62CB3A282004C5C12 /* CreateArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateArticleViewController.swift; sourceTree = "<group>"; };
 		5B442B722CB4B4B200B15CE6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				075810DE2CB9F75100BF44A1 /* NetworkOverviewViewController.swift */,
+				075810E72CBA121300BF44A1 /* NetworkHostDetailViewController.swift */,
 				075810E02CB9F93500BF44A1 /* NetworkHostsViewController.swift */,
 			);
 			path = Network;
@@ -304,6 +307,7 @@
 				5B442B7A2CB5EBC500B15CE6 /* ProfileViewController.swift in Sources */,
 				07CCC6D72CB3A282004C5C12 /* CreateArticleViewController.swift in Sources */,
 				07CCC6D52CB385D7004C5C12 /* ReportArticleModalViewController.swift in Sources */,
+				075810E82CBA121300BF44A1 /* NetworkHostDetailViewController.swift in Sources */,
 				0706D4582CB0C2C800642708 /* InitialViewController.swift in Sources */,
 				075810DF2CB9F75100BF44A1 /* NetworkOverviewViewController.swift in Sources */,
 				0706D4552CB0B8B000642708 /* Graph.swift in Sources */,
