@@ -1974,37 +1974,41 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eF5-Rz-lyZ">
-                                                            <rect key="frame" x="306.33333333333331" y="26.666666666666664" width="41.666666666666686" height="17"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxx-ad-Csw">
+                                                            <rect key="frame" x="333" y="27.666666666666664" width="15" height="15"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="15" id="6rP-WB-sac"/>
+                                                                <constraint firstAttribute="height" constant="15" id="oIH-Mw-TaH"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="eF5-Rz-lyZ" firstAttribute="centerY" secondItem="rn7-fY-Zh3" secondAttribute="centerY" id="Mop-jj-b8s"/>
                                                         <constraint firstItem="ti5-I4-gyx" firstAttribute="centerY" secondItem="rn7-fY-Zh3" secondAttribute="centerY" id="VUz-ax-2M3"/>
+                                                        <constraint firstItem="xxx-ad-Csw" firstAttribute="centerY" secondItem="rn7-fY-Zh3" secondAttribute="centerY" id="XAh-ii-jOr"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xxx-ad-Csw" secondAttribute="trailing" constant="15" id="YWv-rh-pUG"/>
                                                         <constraint firstItem="ti5-I4-gyx" firstAttribute="centerX" secondItem="rn7-fY-Zh3" secondAttribute="centerX" id="cHh-Fr-1fJ"/>
                                                         <constraint firstItem="sGn-dZ-bw5" firstAttribute="centerY" secondItem="rn7-fY-Zh3" secondAttribute="centerY" id="cS0-q8-wMl"/>
                                                         <constraint firstItem="sGn-dZ-bw5" firstAttribute="leading" secondItem="rn7-fY-Zh3" secondAttribute="leading" constant="15" id="qou-Qd-c5b"/>
-                                                        <constraint firstAttribute="trailing" secondItem="eF5-Rz-lyZ" secondAttribute="trailing" constant="15" id="vmb-KA-wx3"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="rn7-fY-Zh3" firstAttribute="centerY" secondItem="I7O-xC-yHl" secondAttribute="centerY" id="64u-Bx-6wz"/>
                                                 <constraint firstAttribute="bottom" secondItem="rn7-fY-Zh3" secondAttribute="bottom" constant="15" id="DdK-dR-q5m"/>
                                                 <constraint firstAttribute="trailing" secondItem="rn7-fY-Zh3" secondAttribute="trailing" constant="15" id="GqC-aW-m5b"/>
                                                 <constraint firstItem="rn7-fY-Zh3" firstAttribute="top" secondItem="I7O-xC-yHl" secondAttribute="top" constant="15" id="W1c-Zu-vxt"/>
                                                 <constraint firstItem="rn7-fY-Zh3" firstAttribute="leading" secondItem="I7O-xC-yHl" secondAttribute="leading" constant="15" id="h4F-HK-R21"/>
+                                                <constraint firstAttribute="trailing" secondItem="rn7-fY-Zh3" secondAttribute="trailing" constant="15" id="i40-AA-IRq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="hostView" destination="rn7-fY-Zh3" id="cfC-5L-OkS"/>
                                             <outlet property="hostnameLabel" destination="ti5-I4-gyx" id="pJ3-8Q-UXz"/>
-                                            <outlet property="statusLabel" destination="eF5-Rz-lyZ" id="6n2-u3-Poj"/>
+                                            <outlet property="statusIndicator" destination="xxx-ad-Csw" id="V33-tD-D79"/>
                                             <outlet property="typeLabel" destination="sGn-dZ-bw5" id="mRO-K1-g1g"/>
                                         </connections>
                                     </tableViewCell>
@@ -2026,8 +2030,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dla-Ek-yd1">
-                                <rect key="frame" x="321" y="175" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dla-Ek-yd1">
+                                <rect key="frame" x="314" y="175" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

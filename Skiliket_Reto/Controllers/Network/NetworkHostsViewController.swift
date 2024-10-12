@@ -66,14 +66,27 @@ class HostCell: UITableViewCell {
     
     @IBOutlet weak var hostView: UIView!
     @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var statusIndicator: UIView!
     @IBOutlet weak var hostnameLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
     
     func configure(type: String, hostname: String, status: String) {
+        
+        var typeFormatted = type
+        if(type == "End Host") {
+            typeFormatted = "Skiliket"
+        }
+        
         hostView.layer.cornerRadius = 20.0
         
-        typeLabel.text = type
+        typeLabel.text = typeFormatted
         hostnameLabel.text = hostname
-        statusLabel.text = status
+        statusIndicator.layer.cornerRadius =
+        statusIndicator.frame.size.width / 2
+        if(status == "SUCCESS") {
+            statusIndicator.backgroundColor = .green
+        }
+        else {
+            statusIndicator.backgroundColor = .red
+        }
     }
 }
