@@ -14,7 +14,8 @@ class NetworkOverviewViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var overviewTableView: UITableView!
 
     var networkHealthData: [NetworkHealthResponse] = []
-    
+    var pollingTimer: Timer?
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
@@ -22,30 +23,23 @@ class NetworkOverviewViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        overviewTableView.backgroundColor = UIColor.black
-        
         summaryView.layer.cornerRadius = 30.0
+        overviewTableView.backgroundColor = UIColor.black
         overviewTableView.delegate = self
         overviewTableView.dataSource = self
-
         overviewTableView.register(UITableViewCell.self, forCellReuseIdentifier: "chartCell")
 
-        // Fetch network health data asynchronously and reload the table when done
-        Task {
-            do {
-                let tokenPTT = try await NetworkHealth.getToken()
-                self.networkHealthData = try await NetworkHealth.getNetworkHealth(token: tokenPTT!)
-                overviewTableView.reloadData()
-            } catch {
-                print("Error fetching network health data")
-            }
-        }
+        // Initial fetch of network health data
+        fetchData()
+
+        // Start polling to fetch data every 5 seconds
+        startPolling()
     }
 
     // MARK: - UITableViewDataSource Methods
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 // Assuming you want just one chart in the table for now
+        return 1 // Currently displaying one chart in the table view
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,6 +77,41 @@ class NetworkOverviewViewController: UIViewController, UITableViewDelegate, UITa
 
     // MARK: - UITableViewDelegate Methods
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200 // Set the desired height for the chart cell
+        return 250 // Set the desired height for the chart cell
+    }
+
+    // MARK: - Data Fetching and Polling
+
+    // Fetch network health data and update table
+    func fetchData() {
+        Task {
+            do {
+                let tokenPTT = try await NetworkHealth.getToken()
+                let newData = try await NetworkHealth.getNetworkHealth(token: tokenPTT!)
+                
+                // Append new data, ensuring unique timestamps
+                self.networkHealthData.append(contentsOf: newData.filterUniqueTimestamps())
+                
+                // Reload table view to reflect the new data
+                overviewTableView.reloadData()
+            } catch {
+                print("Error fetching network health data: \(error)")
+            }
+        }
+    }
+
+    // Start the polling process to fetch data every 5 seconds
+    func startPolling() {
+        pollingTimer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] timer in
+            self?.fetchData()
+        }
+    }
+
+    // Stop polling when the view disappears to save resources
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        pollingTimer?.invalidate() // Stop the timer when not in view
     }
 }
+
+

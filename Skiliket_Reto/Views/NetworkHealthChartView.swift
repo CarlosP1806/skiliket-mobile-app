@@ -30,11 +30,6 @@ struct NetworkHealthChartView: View {
                         .foregroundStyle(.green)
                     }
                 }
-                .chartXAxis {
-                    AxisMarks(values: .automatic) { value in
-                        AxisValueLabel()
-                    }
-                }
                 .chartYAxis {
                     AxisMarks(position: .leading) {
                         AxisGridLine()
@@ -42,20 +37,20 @@ struct NetworkHealthChartView: View {
                         AxisValueLabel()
                     }
                 }
-                .frame(height: 50)
+                .frame(height: 150)
                 .padding()
                 
                 // Health Level display
-                VStack {
+                VStack(spacing: 2) {
                     Text("Health Level")
-                        .font(.subheadline)
+                        .font(.caption)
                         .foregroundColor(.white)
                     Text("\(networkHealthData.last?.networkDevices.totalPercentage ?? "0")%")
-                        .font(.largeTitle)
+                        .font(.title3)
                         .bold()
                         .foregroundColor(.white)
                 }
-                .padding()
+                .padding(.top, 4)
             }
         }
         .padding(16)
