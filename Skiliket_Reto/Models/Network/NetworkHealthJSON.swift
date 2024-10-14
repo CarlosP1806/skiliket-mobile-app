@@ -144,3 +144,15 @@ extension NetworkHealth {
         return networkHealthInstance.response
     }
 }
+
+// Extension to filter unique timestamps in NetworkHealthResponse array
+extension Array where Element == NetworkHealthResponse {
+    func filterUniqueTimestamps() -> [NetworkHealthResponse] {
+        var seen = Set<String>() // To track timestamps we've seen
+        return self.filter { response in
+            guard !seen.contains(response.timestamp) else { return false }
+            seen.insert(response.timestamp)
+            return true
+        }
+    }
+}

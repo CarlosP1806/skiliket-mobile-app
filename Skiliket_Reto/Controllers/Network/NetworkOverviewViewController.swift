@@ -22,6 +22,8 @@ class NetworkOverviewViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overviewTableView.backgroundColor = UIColor.black
+        
         summaryView.layer.cornerRadius = 30.0
         overviewTableView.delegate = self
         overviewTableView.dataSource = self
@@ -48,7 +50,7 @@ class NetworkOverviewViewController: UIViewController, UITableViewDelegate, UITa
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "chartCell", for: indexPath)
-
+        
         // Remove any existing hosting controller's view
         for subview in cell.contentView.subviews {
             subview.removeFromSuperview()
@@ -57,6 +59,9 @@ class NetworkOverviewViewController: UIViewController, UITableViewDelegate, UITa
         // Create a SwiftUI view and embed it in a hosting controller
         let chartView = NetworkHealthChartView(networkHealthData: networkHealthData)
         let hostingController = UIHostingController(rootView: chartView)
+        
+        // Set the hosting controller's view background to black
+        hostingController.view.backgroundColor = UIColor.black
 
         // Add the hosting controller's view to the table cell
         addChild(hostingController)

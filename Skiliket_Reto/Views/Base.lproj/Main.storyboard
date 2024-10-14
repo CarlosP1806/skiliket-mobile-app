@@ -1871,10 +1871,9 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RPz-tj-vOg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RPz-tj-vOg">
                                 <rect key="frame" x="0.0" y="171" width="393" height="671"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chartCell" id="Gge-YU-iHy">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -1891,13 +1890,17 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LtR-ce-oLY" firstAttribute="leading" secondItem="FwO-8m-ZIu" secondAttribute="leading" constant="15" id="1ZI-iW-36R"/>
+                            <constraint firstItem="RPz-tj-vOg" firstAttribute="top" secondItem="LtR-ce-oLY" secondAttribute="bottom" constant="26" id="3m7-mX-OgK"/>
                             <constraint firstItem="LtR-ce-oLY" firstAttribute="top" secondItem="j78-j4-ZGU" secondAttribute="bottom" constant="30" id="FXw-F8-Z4y"/>
                             <constraint firstItem="k1X-ex-r5a" firstAttribute="centerX" secondItem="dsb-OJ-oi3" secondAttribute="centerX" id="N8O-Sg-SY8"/>
                             <constraint firstItem="CL1-RL-bf4" firstAttribute="top" secondItem="j78-j4-ZGU" secondAttribute="bottom" constant="30" id="Q9v-KH-9Yl"/>
+                            <constraint firstItem="RPz-tj-vOg" firstAttribute="bottom" secondItem="FwO-8m-ZIu" secondAttribute="bottom" id="QNd-86-xqJ"/>
                             <constraint firstItem="FwO-8m-ZIu" firstAttribute="trailing" secondItem="j78-j4-ZGU" secondAttribute="trailing" constant="15" id="VbB-lY-aey"/>
                             <constraint firstItem="k1X-ex-r5a" firstAttribute="top" secondItem="j78-j4-ZGU" secondAttribute="bottom" constant="30" id="aIc-tK-w5J"/>
                             <constraint firstItem="j78-j4-ZGU" firstAttribute="top" secondItem="FwO-8m-ZIu" secondAttribute="top" constant="20" id="cXK-DO-iNY"/>
+                            <constraint firstItem="RPz-tj-vOg" firstAttribute="trailing" secondItem="FwO-8m-ZIu" secondAttribute="trailing" id="ezj-ZT-oub"/>
                             <constraint firstItem="j78-j4-ZGU" firstAttribute="leading" secondItem="FwO-8m-ZIu" secondAttribute="leading" constant="15" id="gwR-ZA-2Ku"/>
+                            <constraint firstItem="RPz-tj-vOg" firstAttribute="leading" secondItem="FwO-8m-ZIu" secondAttribute="leading" id="n4i-In-fmM"/>
                             <constraint firstItem="FwO-8m-ZIu" firstAttribute="trailing" secondItem="CL1-RL-bf4" secondAttribute="trailing" constant="15" id="ttm-mH-8Mg"/>
                         </constraints>
                     </view>
@@ -2790,6 +2793,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="GPh-jA-GjX"/>
         <segue reference="9wY-mV-Xjp"/>
         <segue reference="SaJ-Sk-BIA"/>
         <segue reference="ggd-FI-ahW"/>
