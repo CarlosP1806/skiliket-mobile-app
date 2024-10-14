@@ -51,7 +51,7 @@ class NetworkDeviceDetailViewController: UIViewController {
             statusLabel.text = "Down"
         }
         
-        deviceImage.image = UIImage(named: "PC")
+        deviceImage.image = UIImage(named: "router")
         
         
         var typeFormatted = device!.errorDescription

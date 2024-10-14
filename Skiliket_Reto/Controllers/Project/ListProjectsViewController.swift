@@ -41,7 +41,7 @@ class ListProjectsController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! ProjectCell
         let currentArticle = projects[indexPath.row]
         
-        cell.configure(title: currentArticle.title, description: currentArticle.details.description, imageUrl: currentArticle.projectBanner, project_id: currentArticle.projectID, reports: currentArticle.reports, participants: currentArticle.participants)
+        cell.configure(title: currentArticle.title, description: currentArticle.details.description, imageUrl: currentArticle.projectBanner, project_id: currentArticle.projectID, reports: currentArticle.reports, participants: currentArticle.participants, location:currentArticle.location)
         
         return cell
     }
@@ -78,19 +78,22 @@ class ProjectCell: UITableViewCell {
     @IBOutlet weak var projectDescriptionLabel: UILabel!
     @IBOutlet weak var projectTitleLabel: UILabel!
     
+    @IBOutlet weak var projectLocationLabel: UILabel!
     @IBOutlet weak var projectReportsLabel: UILabel!
     
     @IBOutlet weak var projectParticipantsLabel: UILabel!
     
-    func configure(title: String, description: String, imageUrl: String, project_id: String, reports: Int, participants: Int) {
+    func configure(title: String, description: String, imageUrl: String, project_id: String, reports: Int, participants: Int, location:String) {
         projectTitleLabel.text = title
+        projectLocationLabel.text = location
         projectDescriptionLabel.text = description
         projectIDView.text = project_id
         projectImageView.image = UIImage(named: imageUrl)
         projectReportsLabel.text = "\(reports) Reports"
-        projectParticipantsLabel.text = "\(participants) Participants" 
+        projectParticipantsLabel.text = "\(participants) Participants"
         
-        //projectView.layer.cornerRadius = 20
+        projectView.layer.cornerRadius = 20
+        projectImageView.layer.cornerRadius = 20
     }
     
 }

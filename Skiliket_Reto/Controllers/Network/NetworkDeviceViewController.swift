@@ -12,7 +12,7 @@ class NetworkDeviceViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var deviceTableView: UITableView!
     var devices:[Respuesta] = []
 
-    @IBOutlet weak var summaryView: UIView!
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -22,7 +22,7 @@ class NetworkDeviceViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        summaryView.layer.cornerRadius = 30.0
+        
         
         Task {
             do {
@@ -86,8 +86,10 @@ class DeviceCell: UITableViewCell {
     @IBOutlet weak var statusIndicator: UIView!
     @IBOutlet weak var hostnameLabel: UILabel!
     
+    @IBOutlet weak var deviceView: UIView!
+    
     func configure(type: String, hostname: String, status: String) {
-        
+        deviceView.layer.cornerRadius = 30.0
         var typeFormatted = type
 
     

@@ -214,11 +214,8 @@
 			children = (
 				075810E32CB9FC6F00BF44A1 /* TicketResponse.swift */,
 				075810E52CB9FC8C00BF44A1 /* HostJSON.swift */,
-<<<<<<< Updated upstream
 				5BA97F2E2CBCC51C00096985 /* NetworkHealthJSON.swift */,
-=======
 				615824AF2CBCF16800E65D34 /* DeviceJSON.swift */,
->>>>>>> Stashed changes
 			);
 			path = Network;
 			sourceTree = "<group>";
