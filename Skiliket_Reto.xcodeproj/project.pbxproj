@@ -33,6 +33,7 @@
 		5B679E3C2CB61C19000E0822 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B679E3B2CB61C19000E0822 /* EditProfileViewController.swift */; };
 		5BA97F2F2CBCC51C00096985 /* NetworkHealthJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA97F2E2CBCC51C00096985 /* NetworkHealthJSON.swift */; };
 		5BA97F312CBCD27700096985 /* NetworkHealthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA97F302CBCD27700096985 /* NetworkHealthChartView.swift */; };
+		5BA97F332CBD0B4800096985 /* NetworkClientsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA97F322CBD0B4800096985 /* NetworkClientsChartView.swift */; };
 		6134AE222CB2E560002FD3CF /* ListProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134AE212CB2E560002FD3CF /* ListProjectsViewController.swift */; };
 		6134AE242CB2E744002FD3CF /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134AE232CB2E744002FD3CF /* Project.swift */; };
 		6134AE262CB4269D002FD3CF /* DetailedProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134AE252CB4269D002FD3CF /* DetailedProjectViewController.swift */; };
@@ -71,6 +72,7 @@
 		5B679E3B2CB61C19000E0822 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		5BA97F2E2CBCC51C00096985 /* NetworkHealthJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHealthJSON.swift; sourceTree = "<group>"; };
 		5BA97F302CBCD27700096985 /* NetworkHealthChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHealthChartView.swift; sourceTree = "<group>"; };
+		5BA97F322CBD0B4800096985 /* NetworkClientsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientsChartView.swift; sourceTree = "<group>"; };
 		6134AE212CB2E560002FD3CF /* ListProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsViewController.swift; sourceTree = "<group>"; };
 		6134AE232CB2E744002FD3CF /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		6134AE252CB4269D002FD3CF /* DetailedProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedProjectViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				0706D4482CAF660200642708 /* LaunchScreen.storyboard */,
 				0706D4542CB0B8B000642708 /* Graph.swift */,
 				5BA97F302CBCD27700096985 /* NetworkHealthChartView.swift */,
+				5BA97F322CBD0B4800096985 /* NetworkClientsChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6134AE2C2CB450EB002FD3CF /* CreateProjectViewController.swift in Sources */,
+				5BA97F332CBD0B4800096985 /* NetworkClientsChartView.swift in Sources */,
 				0706D45A2CB0C93B00642708 /* LoginViewController.swift in Sources */,
 				075810E12CB9F93500BF44A1 /* NetworkHostsViewController.swift in Sources */,
 				5B442B7A2CB5EBC500B15CE6 /* ProfileViewController.swift in Sources */,

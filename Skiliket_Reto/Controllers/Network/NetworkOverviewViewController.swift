@@ -39,7 +39,7 @@ class NetworkOverviewViewController: UIViewController, UITableViewDelegate, UITa
     // MARK: - UITableViewDataSource Methods
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 // Currently displaying one chart in the table view
+        return 2 // Currently displaying one chart in the table view
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,9 +50,18 @@ class NetworkOverviewViewController: UIViewController, UITableViewDelegate, UITa
             subview.removeFromSuperview()
         }
 
-        // Create a SwiftUI view and embed it in a hosting controller
-        let chartView = NetworkHealthChartView(networkHealthData: networkHealthData)
-        let hostingController = UIHostingController(rootView: chartView)
+        // Conditional logic to render different charts in different cells
+        let hostingController: UIHostingController<AnyView>
+
+        if indexPath.row == 0 {
+            // First chart (existing one)
+            let chartView = NetworkHealthChartView(networkHealthData: networkHealthData)
+            hostingController = UIHostingController(rootView: AnyView(chartView))
+        } else {
+            // Second chart (new chart view)
+            let anotherChartView = NetworkClientsChartView(networkHealthData: networkHealthData) // Define this view separately
+            hostingController = UIHostingController(rootView: AnyView(anotherChartView))
+        }
         
         // Set the hosting controller's view background to black
         hostingController.view.backgroundColor = UIColor.black
@@ -77,9 +86,10 @@ class NetworkOverviewViewController: UIViewController, UITableViewDelegate, UITa
 
     // MARK: - UITableViewDelegate Methods
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250 // Set the desired height for the chart cell
+        return 270 // Set the desired height for the chart cell
     }
 
+    
     // MARK: - Data Fetching and Polling
 
     // Fetch network health data and update table
