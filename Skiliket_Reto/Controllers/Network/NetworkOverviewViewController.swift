@@ -19,6 +19,9 @@ class NetworkOverviewViewController: UIViewController, UITableViewDelegate, UITa
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        
+        // Start polling to fetch data every 5 seconds
+        startPolling()
     }
     
     override func viewDidLoad() {
@@ -31,9 +34,6 @@ class NetworkOverviewViewController: UIViewController, UITableViewDelegate, UITa
 
         // Initial fetch of network health data
         fetchData()
-
-        // Start polling to fetch data every 5 seconds
-        startPolling()
     }
 
     // MARK: - UITableViewDataSource Methods
@@ -102,6 +102,7 @@ class NetworkOverviewViewController: UIViewController, UITableViewDelegate, UITa
 
     // Start the polling process to fetch data every 5 seconds
     func startPolling() {
+        pollingTimer?.invalidate() // Ensure any existing timer is invalidated before creating a new one
         pollingTimer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] timer in
             self?.fetchData()
         }

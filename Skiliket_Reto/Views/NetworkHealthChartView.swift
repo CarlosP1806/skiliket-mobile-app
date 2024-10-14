@@ -33,8 +33,21 @@ struct NetworkHealthChartView: View {
                 .chartYAxis {
                     AxisMarks(position: .leading) {
                         AxisGridLine()
+                            .foregroundStyle(Color.gray) // Color de las líneas de cuadrícula del eje Y
                         AxisTick()
+                            .foregroundStyle(Color.white) // Color de las marcas (ticks) del eje Y
                         AxisValueLabel()
+                            .foregroundStyle(Color.white) // Color de las etiquetas del eje Y
+                    }
+                }
+                .chartXAxis {
+                    AxisMarks(position: .bottom) {
+                        AxisGridLine()
+                            .foregroundStyle(Color.gray) // Color de las líneas de cuadrícula del eje X
+                        AxisTick()
+                            .foregroundStyle(Color.white) // Color de las marcas (ticks) del eje X
+                        AxisValueLabel()
+                            .foregroundStyle(Color.white) // Color de las etiquetas del eje X
                     }
                 }
                 .frame(height: 150)
@@ -54,8 +67,12 @@ struct NetworkHealthChartView: View {
             }
         }
         .padding(16)
-        .background(Color.blue)
+        .background(Color.black)
         .cornerRadius(15)
+        .overlay(
+            RoundedRectangle(cornerRadius: 15)
+                .stroke(Color.green, lineWidth: 2) // Borde verde alrededor de la vista
+        )
         .shadow(radius: 5)
     }
 
