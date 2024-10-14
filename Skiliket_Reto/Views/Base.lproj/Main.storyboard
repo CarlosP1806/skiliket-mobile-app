@@ -2010,7 +2010,7 @@
                                             <outlet property="hostnameLabel" destination="ti5-I4-gyx" id="pJ3-8Q-UXz"/>
                                             <outlet property="statusIndicator" destination="xxx-ad-Csw" id="V33-tD-D79"/>
                                             <outlet property="typeLabel" destination="sGn-dZ-bw5" id="mRO-K1-g1g"/>
-                                            <segue destination="sEh-ao-aUY" kind="show" id="kgh-Kn-I6d"/>
+                                            <segue destination="sEh-ao-aUY" kind="show" identifier="hostDetailSegue" id="kgh-Kn-I6d"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2083,7 +2083,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSr-W8-L9e">
                                 <rect key="frame" x="15" y="76" width="363" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j8i-gY-A6w">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j8i-gY-A6w">
                                         <rect key="frame" x="10" y="10" width="100" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="YDC-9H-d6v"/>
@@ -2370,9 +2370,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="Bcz-kh-pHv"/>
                     <connections>
+                        <outlet property="bannerView" destination="sSr-W8-L9e" id="2K1-Py-Y3n"/>
+                        <outlet property="connectedLabel" destination="NDf-vU-FXD" id="8Rx-34-z4B"/>
+                        <outlet property="connectedView" destination="7mR-p5-fXC" id="4Zx-Pf-pzp"/>
+                        <outlet property="connectionView" destination="NCW-8R-ZKi" id="FdR-If-Sk3"/>
+                        <outlet property="deviceImage" destination="j8i-gY-A6w" id="auo-vH-HQm"/>
+                        <outlet property="deviceView" destination="4eM-4V-kVt" id="A4o-aM-sM3"/>
                         <outlet property="hostnameLabel" destination="sDo-SS-8H7" id="3tD-Kh-Vm5"/>
+                        <outlet property="interfaceLabel" destination="uLK-uK-Mob" id="rFd-69-3wm"/>
+                        <outlet property="interfaceView" destination="6Pa-VR-tQq" id="jow-ll-gVZ"/>
                         <outlet property="ipLabel" destination="QBk-e0-UA3" id="2Qv-OJ-9uU"/>
+                        <outlet property="locationLabel" destination="l4W-VR-YMr" id="dqD-hw-obx"/>
+                        <outlet property="locationView" destination="65S-aZ-Oxq" id="2n2-uN-jxn"/>
                         <outlet property="macLabel" destination="sN5-pI-F46" id="ovC-bK-scO"/>
+                        <outlet property="statusLabel" destination="31s-Po-bFg" id="r79-3E-BtK"/>
+                        <outlet property="typeLabel" destination="PUx-FK-9zW" id="LZq-eO-rQB"/>
+                        <outlet property="vlanLabel" destination="ORa-Aw-mV4" id="BOy-5u-5Eg"/>
+                        <outlet property="vlanView" destination="ud4-jp-2gq" id="qY6-YN-qVM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDU-7Q-ttS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -56,13 +56,15 @@ class NetworkHostsViewController: UIViewController, UITableViewDelegate, UITable
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextView = segue.destination as! NetworkHostDetailViewController
-        let index = hostTableView.indexPathForSelectedRow?.row
-        guard let index = index else {
-            return
+        if(segue.identifier == "hostDetailSegue") {
+            let nextView = segue.destination as! NetworkHostDetailViewController
+            let index = hostTableView.indexPathForSelectedRow?.row
+            guard let index = index else {
+                return
+            }
+            let host = hosts[index]
+            nextView.host = host
         }
-        let host = hosts[index]
-        nextView.host = host
     }
 }
 
