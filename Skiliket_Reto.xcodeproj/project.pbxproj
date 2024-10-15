@@ -44,6 +44,24 @@
 		615824B02CBCF16800E65D34 /* DeviceJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615824AF2CBCF16800E65D34 /* DeviceJSON.swift */; };
 		B96BED562CB75875008A5CEF /* PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BED552CB75875008A5CEF /* PrivacyPolicy.swift */; };
 		B96BED5A2CB75C71008A5CEF /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BED592CB75C71008A5CEF /* PrivacyPolicyViewController.swift */; };
+		B96BED5D2CBDE00E008A5CEF /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BED5C2CBDE00E008A5CEF /* Temperature.swift */; };
+		B96BED5F2CBDE023008A5CEF /* TemperaturePT.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BED5E2CBDE023008A5CEF /* TemperaturePT.swift */; };
+		B96BED622CBDE608008A5CEF /* SensorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BED612CBDE608008A5CEF /* SensorSelectionViewController.swift */; };
+		B96BED642CBDE667008A5CEF /* CitySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BED632CBDE667008A5CEF /* CitySelectionViewController.swift */; };
+		B96BED662CBDE69F008A5CEF /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BED652CBDE69F008A5CEF /* GraphViewController.swift */; };
+		B96BED682CBDE749008A5CEF /* TemperatureLineChartUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BED672CBDE749008A5CEF /* TemperatureLineChartUIView.swift */; };
+		B9F8FCCB2CBEFF3D00A2007E /* Humidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCCA2CBEFF3D00A2007E /* Humidity.swift */; };
+		B9F8FCCD2CBEFF5900A2007E /* HumidityPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCCC2CBEFF5900A2007E /* HumidityPT.swift */; };
+		B9F8FCCF2CBEFF6B00A2007E /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCCE2CBEFF6B00A2007E /* Sound.swift */; };
+		B9F8FCD12CBEFF7800A2007E /* SoundPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCD02CBEFF7800A2007E /* SoundPT.swift */; };
+		B9F8FCD32CBEFF8700A2007E /* SmokePT.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCD22CBEFF8700A2007E /* SmokePT.swift */; };
+		B9F8FCD52CBEFF9300A2007E /* Smoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCD42CBEFF9300A2007E /* Smoke.swift */; };
+		B9F8FCD72CBEFFA100A2007E /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCD62CBEFFA100A2007E /* Light.swift */; };
+		B9F8FCD92CBEFFAC00A2007E /* LightPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCD82CBEFFAC00A2007E /* LightPT.swift */; };
+		B9F8FCDB2CBF029400A2007E /* HumidityLineChartUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCDA2CBF029400A2007E /* HumidityLineChartUIView.swift */; };
+		B9F8FCDD2CBF187A00A2007E /* HumidityGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCDC2CBF187A00A2007E /* HumidityGraphViewController.swift */; };
+		B9F8FCDF2CBF1DA800A2007E /* SoundLineChartUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCDE2CBF1DA800A2007E /* SoundLineChartUIView.swift */; };
+		B9F8FCE12CBF1E2500A2007E /* SoundGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCE02CBF1E2500A2007E /* SoundGraphViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +104,24 @@
 		615824AF2CBCF16800E65D34 /* DeviceJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceJSON.swift; sourceTree = "<group>"; };
 		B96BED552CB75875008A5CEF /* PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicy.swift; sourceTree = "<group>"; };
 		B96BED592CB75C71008A5CEF /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		B96BED5C2CBDE00E008A5CEF /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		B96BED5E2CBDE023008A5CEF /* TemperaturePT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperaturePT.swift; sourceTree = "<group>"; };
+		B96BED612CBDE608008A5CEF /* SensorSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorSelectionViewController.swift; sourceTree = "<group>"; };
+		B96BED632CBDE667008A5CEF /* CitySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionViewController.swift; sourceTree = "<group>"; };
+		B96BED652CBDE69F008A5CEF /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		B96BED672CBDE749008A5CEF /* TemperatureLineChartUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureLineChartUIView.swift; sourceTree = "<group>"; };
+		B9F8FCCA2CBEFF3D00A2007E /* Humidity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Humidity.swift; sourceTree = "<group>"; };
+		B9F8FCCC2CBEFF5900A2007E /* HumidityPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityPT.swift; sourceTree = "<group>"; };
+		B9F8FCCE2CBEFF6B00A2007E /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		B9F8FCD02CBEFF7800A2007E /* SoundPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPT.swift; sourceTree = "<group>"; };
+		B9F8FCD22CBEFF8700A2007E /* SmokePT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokePT.swift; sourceTree = "<group>"; };
+		B9F8FCD42CBEFF9300A2007E /* Smoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smoke.swift; sourceTree = "<group>"; };
+		B9F8FCD62CBEFFA100A2007E /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		B9F8FCD82CBEFFAC00A2007E /* LightPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPT.swift; sourceTree = "<group>"; };
+		B9F8FCDA2CBF029400A2007E /* HumidityLineChartUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityLineChartUIView.swift; sourceTree = "<group>"; };
+		B9F8FCDC2CBF187A00A2007E /* HumidityGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityGraphViewController.swift; sourceTree = "<group>"; };
+		B9F8FCDE2CBF1DA800A2007E /* SoundLineChartUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLineChartUIView.swift; sourceTree = "<group>"; };
+		B9F8FCE02CBF1E2500A2007E /* SoundGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundGraphViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +167,11 @@
 		0706D4512CAF661500642708 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B9F8FCC92CBEFF2100A2007E /* Light */,
+				B9F8FCC82CBEFF0100A2007E /* Smoke */,
+				B9F8FCC72CBEFEEC00A2007E /* Sound */,
+				B9F8FCC62CBEFECD00A2007E /* Humidity */,
+				B96BED5B2CBDDFEC008A5CEF /* Temperature */,
 				075810E22CB9FC5B00BF44A1 /* Network */,
 				072A844A2CB22C55006C8FE0 /* NewsArticle.swift */,
 				B96BED552CB75875008A5CEF /* PrivacyPolicy.swift */,
@@ -148,6 +189,9 @@
 				0706D4542CB0B8B000642708 /* Graph.swift */,
 				5BA97F302CBCD27700096985 /* NetworkHealthChartView.swift */,
 				5BA97F322CBD0B4800096985 /* NetworkClientsChartView.swift */,
+				B96BED672CBDE749008A5CEF /* TemperatureLineChartUIView.swift */,
+				B9F8FCDA2CBF029400A2007E /* HumidityLineChartUIView.swift */,
+				B9F8FCDE2CBF1DA800A2007E /* SoundLineChartUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +199,7 @@
 		0706D4532CAF661E00642708 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B96BED602CBDE5BE008A5CEF /* Dashboard */,
 				075810DD2CB9F73E00BF44A1 /* Network */,
 				B96BED542CB75061008A5CEF /* Signup */,
 				5B442B7C2CB5EC8800B15CE6 /* Profile */,
@@ -248,6 +293,63 @@
 			path = Signup;
 			sourceTree = "<group>";
 		};
+		B96BED5B2CBDDFEC008A5CEF /* Temperature */ = {
+			isa = PBXGroup;
+			children = (
+				B96BED5C2CBDE00E008A5CEF /* Temperature.swift */,
+				B96BED5E2CBDE023008A5CEF /* TemperaturePT.swift */,
+			);
+			path = Temperature;
+			sourceTree = "<group>";
+		};
+		B96BED602CBDE5BE008A5CEF /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				B96BED612CBDE608008A5CEF /* SensorSelectionViewController.swift */,
+				B96BED632CBDE667008A5CEF /* CitySelectionViewController.swift */,
+				B96BED652CBDE69F008A5CEF /* GraphViewController.swift */,
+				B9F8FCDC2CBF187A00A2007E /* HumidityGraphViewController.swift */,
+				B9F8FCE02CBF1E2500A2007E /* SoundGraphViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		B9F8FCC62CBEFECD00A2007E /* Humidity */ = {
+			isa = PBXGroup;
+			children = (
+				B9F8FCCA2CBEFF3D00A2007E /* Humidity.swift */,
+				B9F8FCCC2CBEFF5900A2007E /* HumidityPT.swift */,
+			);
+			path = Humidity;
+			sourceTree = "<group>";
+		};
+		B9F8FCC72CBEFEEC00A2007E /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				B9F8FCCE2CBEFF6B00A2007E /* Sound.swift */,
+				B9F8FCD02CBEFF7800A2007E /* SoundPT.swift */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		B9F8FCC82CBEFF0100A2007E /* Smoke */ = {
+			isa = PBXGroup;
+			children = (
+				B9F8FCD42CBEFF9300A2007E /* Smoke.swift */,
+				B9F8FCD22CBEFF8700A2007E /* SmokePT.swift */,
+			);
+			path = Smoke;
+			sourceTree = "<group>";
+		};
+		B9F8FCC92CBEFF2100A2007E /* Light */ = {
+			isa = PBXGroup;
+			children = (
+				B9F8FCD62CBEFFA100A2007E /* Light.swift */,
+				B9F8FCD82CBEFFAC00A2007E /* LightPT.swift */,
+			);
+			path = Light;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -320,12 +422,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				615824AA2CBCE90A00E65D34 /* NetworkDeviceDetailViewController.swift in Sources */,
+				B9F8FCDB2CBF029400A2007E /* HumidityLineChartUIView.swift in Sources */,
 				6134AE2C2CB450EB002FD3CF /* CreateProjectViewController.swift in Sources */,
 				5BA97F332CBD0B4800096985 /* NetworkClientsChartView.swift in Sources */,
 				0706D45A2CB0C93B00642708 /* LoginViewController.swift in Sources */,
+				B96BED622CBDE608008A5CEF /* SensorSelectionViewController.swift in Sources */,
 				075810E12CB9F93500BF44A1 /* NetworkHostsViewController.swift in Sources */,
+				B9F8FCE12CBF1E2500A2007E /* SoundGraphViewController.swift in Sources */,
 				5B442B7A2CB5EBC500B15CE6 /* ProfileViewController.swift in Sources */,
 				5BA97F312CBCD27700096985 /* NetworkHealthChartView.swift in Sources */,
+				B96BED642CBDE667008A5CEF /* CitySelectionViewController.swift in Sources */,
 				07CCC6D72CB3A282004C5C12 /* CreateArticleViewController.swift in Sources */,
 				07CCC6D52CB385D7004C5C12 /* ReportArticleModalViewController.swift in Sources */,
 				075810E82CBA121300BF44A1 /* NetworkHostDetailViewController.swift in Sources */,
@@ -333,25 +439,39 @@
 				075810DF2CB9F75100BF44A1 /* NetworkOverviewViewController.swift in Sources */,
 				0706D4552CB0B8B000642708 /* Graph.swift in Sources */,
 				075810E62CB9FC8C00BF44A1 /* HostJSON.swift in Sources */,
+				B9F8FCD32CBEFF8700A2007E /* SmokePT.swift in Sources */,
+				B9F8FCCD2CBEFF5900A2007E /* HumidityPT.swift in Sources */,
+				B9F8FCDF2CBF1DA800A2007E /* SoundLineChartUIView.swift in Sources */,
+				B9F8FCD12CBEFF7800A2007E /* SoundPT.swift in Sources */,
 				6134AE262CB4269D002FD3CF /* DetailedProjectViewController.swift in Sources */,
 				0706D45D2CB0CEB800642708 /* ResponderUtils.swift in Sources */,
 				072A844B2CB22C55006C8FE0 /* NewsArticle.swift in Sources */,
 				B96BED562CB75875008A5CEF /* PrivacyPolicy.swift in Sources */,
+				B9F8FCDD2CBF187A00A2007E /* HumidityGraphViewController.swift in Sources */,
 				0706D4422CAF660100642708 /* ViewController.swift in Sources */,
 				0706D43E2CAF660100642708 /* AppDelegate.swift in Sources */,
 				6134AE242CB2E744002FD3CF /* Project.swift in Sources */,
 				6134AE2A2CB44946002FD3CF /* CreateReportViewController.swift in Sources */,
 				072943732CB3717E007A73A4 /* ArticleModalViewController.swift in Sources */,
 				615824B02CBCF16800E65D34 /* DeviceJSON.swift in Sources */,
+				B9F8FCCB2CBEFF3D00A2007E /* Humidity.swift in Sources */,
+				B96BED5F2CBDE023008A5CEF /* TemperaturePT.swift in Sources */,
 				072A844D2CB31C0A006C8FE0 /* ArticleViewController.swift in Sources */,
 				0706D4402CAF660100642708 /* SceneDelegate.swift in Sources */,
 				5B442B732CB4B4B200B15CE6 /* Profile.swift in Sources */,
 				072A84492CB22818006C8FE0 /* NewsFeedViewController.swift in Sources */,
+				B9F8FCD72CBEFFA100A2007E /* Light.swift in Sources */,
+				B9F8FCD92CBEFFAC00A2007E /* LightPT.swift in Sources */,
 				615824A82CBCE8FA00E65D34 /* NetworkDeviceViewController.swift in Sources */,
+				B96BED682CBDE749008A5CEF /* TemperatureLineChartUIView.swift in Sources */,
 				B96BED5A2CB75C71008A5CEF /* PrivacyPolicyViewController.swift in Sources */,
+				B9F8FCCF2CBEFF6B00A2007E /* Sound.swift in Sources */,
+				B9F8FCD52CBEFF9300A2007E /* Smoke.swift in Sources */,
+				B96BED662CBDE69F008A5CEF /* GraphViewController.swift in Sources */,
 				5BA97F2F2CBCC51C00096985 /* NetworkHealthJSON.swift in Sources */,
 				6134AE222CB2E560002FD3CF /* ListProjectsViewController.swift in Sources */,
 				075810E42CB9FC6F00BF44A1 /* TicketResponse.swift in Sources */,
+				B96BED5D2CBDE00E008A5CEF /* Temperature.swift in Sources */,
 				5B679E3C2CB61C19000E0822 /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
