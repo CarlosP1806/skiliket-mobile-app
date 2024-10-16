@@ -35,6 +35,7 @@
 		5B679E3C2CB61C19000E0822 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B679E3B2CB61C19000E0822 /* EditProfileViewController.swift */; };
 		5B8B04752CBFA95D0035B25A /* TemperatureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B04742CBFA95D0035B25A /* TemperatureData.swift */; };
 		5B8B04772CBFD0430035B25A /* HumidityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B04762CBFD0430035B25A /* HumidityData.swift */; };
+		5B8B04792CBFE2CD0035B25A /* SmokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B04782CBFE2CD0035B25A /* SmokeData.swift */; };
 		5BA97F2F2CBCC51C00096985 /* NetworkHealthJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA97F2E2CBCC51C00096985 /* NetworkHealthJSON.swift */; };
 		5BA97F312CBCD27700096985 /* NetworkHealthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA97F302CBCD27700096985 /* NetworkHealthChartView.swift */; };
 		5BA97F332CBD0B4800096985 /* NetworkClientsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA97F322CBD0B4800096985 /* NetworkClientsChartView.swift */; };
@@ -114,6 +115,7 @@
 		5B679E3B2CB61C19000E0822 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		5B8B04742CBFA95D0035B25A /* TemperatureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureData.swift; sourceTree = "<group>"; };
 		5B8B04762CBFD0430035B25A /* HumidityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityData.swift; sourceTree = "<group>"; };
+		5B8B04782CBFE2CD0035B25A /* SmokeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeData.swift; sourceTree = "<group>"; };
 		5BA97F2E2CBCC51C00096985 /* NetworkHealthJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHealthJSON.swift; sourceTree = "<group>"; };
 		5BA97F302CBCD27700096985 /* NetworkHealthChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHealthChartView.swift; sourceTree = "<group>"; };
 		5BA97F322CBD0B4800096985 /* NetworkClientsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientsChartView.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 			children = (
 				B9F8FCD42CBEFF9300A2007E /* Smoke.swift */,
 				B9F8FCD22CBEFF8700A2007E /* SmokePT.swift */,
+				5B8B04782CBFE2CD0035B25A /* SmokeData.swift */,
 			);
 			path = Smoke;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				6134AE2C2CB450EB002FD3CF /* CreateProjectViewController.swift in Sources */,
 				B9FF5ED42CBF71A400BBB80A /* SmokeGraphViewController.swift in Sources */,
 				5BA97F332CBD0B4800096985 /* NetworkClientsChartView.swift in Sources */,
+				5B8B04792CBFE2CD0035B25A /* SmokeData.swift in Sources */,
 				0706D45A2CB0C93B00642708 /* LoginViewController.swift in Sources */,
 				B96BED622CBDE608008A5CEF /* SensorSelectionViewController.swift in Sources */,
 				075810E12CB9F93500BF44A1 /* NetworkHostsViewController.swift in Sources */,

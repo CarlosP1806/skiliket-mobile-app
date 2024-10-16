@@ -9,62 +9,60 @@ import SwiftUI
 import Charts
 
 struct SmokeLineChartUIView: View {
-    var smokeData: [Smoke]
-    @State private var selectedReading: Smoke?
-    
+    @ObservedObject var smokeData: SmokeData
+
     var body: some View {
-        VStack{
-            Text("Smoke")
-                .font(.title)
-                .padding()
-            
+        VStack {
+            // Single white header
+            Text("Smoke Levels (%)")
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding(.top, 10)
+
+            // Chart view with black background, red area, and white axis
             Chart {
-                ForEach(smokeData) { reading in
-                    LineMark(
-                        x: .value("Time", reading.timeStamp),
-                        y: .value("Smoke", Double(reading.value) ?? 0.0)
+                ForEach(smokeData.smokes, id: \.timeStamp) { smoke in
+                    // Define the AreaMark for the area chart
+                    AreaMark(
+                        x: .value("Time", smoke.timeStamp, unit: .second),
+                        y: .value("Smoke", Double(smoke.value) ?? 0)
                     )
-                    .interpolationMethod(.catmullRom)
+                    .foregroundStyle(LinearGradient(
+                        gradient: Gradient(colors: [Color.green.opacity(0.6), Color.green.opacity(0.1)]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )) // Red gradient for the area
                 }
             }
-            .chartYScale(domain: 0...100)
-            .chartXAxisLabel("Date&time", position: .bottom)
-            .chartYAxisLabel("°Celsius", position: .leading)
-            .padding()
-            .chartOverlay { proxy in
-                GeometryReader { geo in
-                    Rectangle().fill(Color.clear).contentShape(Rectangle())
-                        .gesture(
-                            DragGesture()
-                                .onChanged { value in
-                                    let location = value.location
-                                    if let date: Date = proxy.value(atX: location.x),
-                                       let closestReading = smokeData.min(by: {
-                                           abs($0.timeStamp.timeIntervalSince(date)) <
-                                           abs($1.timeStamp.timeIntervalSince(date))
-                                       }) {
-                                        selectedReading = closestReading
-                                    }
-                                }
-                        )
+            .chartYScale(domain: 0...100)  // Smoke levels typically range from 0 to 100%
+            .chartXAxis {
+                AxisMarks(values: .automatic) {
+                    AxisGridLine().foregroundStyle(Color.white) // White grid lines for x-axis
+                    AxisTick().foregroundStyle(Color.white) // White tick marks for x-axis
+                    AxisValueLabel(format: .dateTime.second())
+                        .foregroundStyle(Color.white) // White x-axis labels
                 }
             }
-                        
-            if let selectedReading = selectedReading {
-                Text("Smoke: \(selectedReading.value) °C")
-                    .font(.headline)
-                Text("Date: \(selectedReading.timeStamp.formatted(date: .numeric, time: .shortened))")
-                    .font(.subheadline)
-                    .padding(.top, 4)
+            .chartYAxis {
+                AxisMarks(values: .automatic) {
+                    AxisGridLine().foregroundStyle(Color.white) // White grid lines for y-axis
+                    AxisTick().foregroundStyle(Color.white) // White tick marks for y-axis
+                    AxisValueLabel()
+                        .foregroundStyle(Color.white) // White y-axis labels
+                }
             }
+            .frame(maxWidth: .infinity, maxHeight: 300)
+            .padding([.leading, .trailing], 16) // Add padding to prevent cutting off the chart
+            .background(Color.black) // Black background for the chart area
+
+            // X-Axis title
+            Text("Time (Seconds)")
+                .font(.caption) // Smaller font size for axis title
+                .foregroundColor(.white)
+                .padding(.top, 8) // Add some space between the chart and the title
         }
+        .background(Color.black) // Black background for the entire view
     }
 }
 
-#Preview {
-    SmokeLineChartUIView(smokeData: [
-        Smoke(value: "22.0", timeStamp: Date().addingTimeInterval(-3600)),
-        Smoke(value: "23.5", timeStamp: Date().addingTimeInterval(-1800)),
-        Smoke(value: "24.0", timeStamp: Date())
-    ])
-}
+
