@@ -338,8 +338,8 @@
 		B96BED602CBDE5BE008A5CEF /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				B96BED612CBDE608008A5CEF /* SensorSelectionViewController.swift */,
 				B96BED632CBDE667008A5CEF /* CitySelectionViewController.swift */,
+				B96BED612CBDE608008A5CEF /* SensorSelectionViewController.swift */,
 				B96BED652CBDE69F008A5CEF /* GraphViewController.swift */,
 				B9F8FCDC2CBF187A00A2007E /* HumidityGraphViewController.swift */,
 				B9F8FCE02CBF1E2500A2007E /* SoundGraphViewController.swift */,
