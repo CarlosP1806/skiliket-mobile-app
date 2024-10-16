@@ -14,6 +14,7 @@ class HumidityGraphViewController: UIViewController {
 
     @IBOutlet weak var graphContainerView: UIView!
 
+
     // Create an instance of HumidityData (ObservableObject)
     var humidityData = HumidityData()
 
@@ -33,8 +34,9 @@ class HumidityGraphViewController: UIViewController {
     }
 
     func loadGraph(sensor: String, city: String) {
-        // Create the graph view and add it to the container
+        // Crear la vista de la gráfica y asignarla al contenedor
         let graphView = UIHostingController(rootView: HumidityLineChartUIView(humidityData: humidityData))
+        graphView.view.backgroundColor = .black
         addChild(graphView)
         
         // Set the hosting controller's view background to black

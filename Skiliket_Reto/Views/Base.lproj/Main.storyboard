@@ -1201,7 +1201,7 @@
         <!--List Projects Controller-->
         <scene sceneID="AxY-FT-gvh">
             <objects>
-                <viewController id="TQ6-zJ-y6Y" customClass="ListProjectsController" customModule="Skiliket_Reto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListProjectsController" id="TQ6-zJ-y6Y" customClass="ListProjectsController" customModule="Skiliket_Reto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N2B-dl-9bO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2028,7 +2028,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqs-Xy-LYe">
                                 <rect key="frame" x="0.0" y="56" width="393" height="737"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PLu-V2-pB0"/>

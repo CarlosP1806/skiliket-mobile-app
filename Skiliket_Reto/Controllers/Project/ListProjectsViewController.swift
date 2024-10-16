@@ -20,7 +20,7 @@ class ListProjectsController: UIViewController, UITableViewDelegate, UITableView
         
         Task {
             do {
-                self.projects = try await Project.fetchProjects()
+                self.projects = try await Project.fetchProjects(url: "http://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo4/projects.json")
                 projectTableView.reloadData()
                 print(projects)
             }

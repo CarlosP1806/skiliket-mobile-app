@@ -2,13 +2,14 @@
 //  HumidityData.swift
 //  Skiliket_Reto
 //
-//  Created by Pedro Luis Pérez Collado on 16/10/24.
+//  Created by Eashley Brittney Martinez Vergara on 16/10/24.
 //
 
 import Foundation
 import Combine
 
 class HumidityData: ObservableObject {
+<<<<<<< HEAD
     @Published var humidities: [Humidity] = []
     
     func addHumidity(_ humidity: Humidity) {

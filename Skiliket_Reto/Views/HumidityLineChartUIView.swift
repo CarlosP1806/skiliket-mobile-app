@@ -1,10 +1,3 @@
-//
-//  HumidityLineChartUIView.swift
-//  Skiliket_Reto
-//
-//  Created by José Antonio Pacheco on 15/10/24.
-//
-
 import SwiftUI
 import Charts
 
