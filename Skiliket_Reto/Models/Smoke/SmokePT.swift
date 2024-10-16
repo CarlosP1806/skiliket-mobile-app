@@ -7,16 +7,16 @@
 
 import Foundation
 
-/*
-class SoundPT: Codable {
-    let sound: Int
+
+class SmokePT: Codable {
+    let smoke: Int
 
     enum CodingKeys: String, CodingKey {
-        case sound = "Sound"
+        case smoke = "Smoke"
     }
     
-    init(sound: Int) {
-        self.sound = sound
+    init(smoke: Int) {
+        self.smoke = smoke
     }
 }
-*/
+

@@ -1927,6 +1927,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Smoke"/>
                                 <connections>
                                     <action selector="smokeButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="reO-og-ig7"/>
+                                    <segue destination="IfZ-7q-lSU" kind="show" identifier="toSmokeGraphView" id="X4c-BB-GIV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOJ-Xz-xYX">
@@ -2005,7 +2006,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqs-Xy-LYe">
-                                <rect key="frame" x="31" y="106" width="330" height="640"/>
+                                <rect key="frame" x="32" y="130" width="330" height="640"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -2022,13 +2023,31 @@
             </objects>
             <point key="canvasLocation" x="6508" y="373"/>
         </scene>
-        <!--Hosting Controller-->
-        <scene sceneID="c41-SH-VY1">
+        <!--Smoke Graph View Controller-->
+        <scene sceneID="r58-Pq-JMY">
             <objects>
-                <hostingController id="aCR-0x-h1s" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LNv-fp-Aee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="IfZ-7q-lSU" customClass="SmokeGraphViewController" customModule="Skiliket_Reto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mDG-QO-GE5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zl2-Y0-Q9W">
+                                <rect key="frame" x="32" y="130" width="330" height="640"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o1b-2y-Rx3"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wmk-4F-hOn"/>
+                    <connections>
+                        <outlet property="graphContainerView" destination="zl2-Y0-Q9W" id="SJx-10-itg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAK-tr-e51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7305" y="373"/>
+            <point key="canvasLocation" x="7285" y="373"/>
         </scene>
         <!--Network Overview View Controller-->
         <scene sceneID="7rK-E7-6tD">
