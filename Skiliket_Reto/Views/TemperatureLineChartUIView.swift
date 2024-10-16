@@ -16,7 +16,10 @@ struct TemperatureLineChartUIView: View {
         VStack{
             Text("Temperature")
                 .font(.title)
+                .foregroundColor(.white)
                 .padding()
+            
+            let filledTemperatureData = Array(fillDataWithDefaults(temperatureData).suffix(4))
             
             Chart {
                 ForEach(temperatureData) { reading in
@@ -25,11 +28,12 @@ struct TemperatureLineChartUIView: View {
                         y: .value("Temperature", Double(reading.value) ?? 0.0)
                     )
                     .interpolationMethod(.catmullRom)
+                    .foregroundStyle(reading.value < "50.0" ? Color.blue : Color.red)
                 }
             }
-            .chartYScale(domain: 0...100)
-            .chartXAxisLabel("Date&time", position: .bottom)
-            .chartYAxisLabel("°Celsius", position: .leading)
+            .chartYScale(domain: calculateYAxisRange(from: filledTemperatureData))
+            .chartXAxisLabel("Date & time", position: .bottom)
+            .chartYAxisLabel("Temperature °Celsius", position: .leading)
             .padding()
             .chartOverlay { proxy in
                 GeometryReader { geo in
@@ -39,7 +43,7 @@ struct TemperatureLineChartUIView: View {
                                 .onChanged { value in
                                     let location = value.location
                                     if let date: Date = proxy.value(atX: location.x),
-                                       let closestReading = temperatureData.min(by: {
+                                       let closestReading = filledTemperatureData.min(by: {
                                            abs($0.timeStamp.timeIntervalSince(date)) <
                                            abs($1.timeStamp.timeIntervalSince(date))
                                        }) {
@@ -58,6 +62,26 @@ struct TemperatureLineChartUIView: View {
                     .padding(.top, 4)
             }
         }
+    }
+    // Ensure there are always at least 5 data points
+    func fillDataWithDefaults(_ data: [Temperature]) -> [Temperature] {
+        var filledData = data
+        
+        // If there are fewer than 5 entries, add default placeholder data
+        let defaultTemperature = Temperature(value: "0.0", timeStamp: Date().addingTimeInterval(-3600))
+        while filledData.count < 4 {
+            filledData.insert(defaultTemperature, at: 0)
+        }
+        
+        return filledData
+    }
+    // Calculate the Y-axis range based on the data, with a buffer
+    func calculateYAxisRange(from data: [Temperature]) -> ClosedRange<Double> {
+        let minTemperature = data.map { Double($0.value) ?? 0.0 }.min() ?? 0.0
+        let maxTemperature = data.map { Double($0.value) ?? 0.0 }.max() ?? 100.0
+        let buffer = 10.0 // Add some buffer to the Y-axis range for clarity
+        
+        return (minTemperature - buffer)...(maxTemperature + buffer)
     }
 }
 
