@@ -44,7 +44,7 @@ final class News_Tests: XCTestCase {
     }
     
     func testFetchNewsArticlesFailure() async throws {
-        let expectation = self.expectation(description: "Articles fetched correctly from url")
+        let expectation = self.expectation(description: "Articles fetched incorrectly from url")
         do {
             let articles = try await Article.fetchArticles(url: "http://localhost:8080")
             XCTAssertEqual(articles.count, 0, "The number of fetched articles should have been 0")
@@ -66,6 +66,19 @@ final class News_Tests: XCTestCase {
             XCTAssertEqual(firstArticle.author.name, firstArticleAuthor)
             XCTAssertEqual(firstArticle.date, firstArticleDate)
             XCTAssertEqual(firstArticle.title, firstArticleTitle)
+            expectation.fulfill()
+        } catch {
+            XCTFail("Error fetching articles")
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testShowDetailsOfArticleFailure() async throws {
+        let expectation = self.expectation(description: "Articles fetched correctly from url")
+        do {
+            let articles = try await Article.fetchArticles(url: "http://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo4/news_empty.json")
+            
+            XCTAssertEqual(articles.count, 0)
             expectation.fulfill()
         } catch {
             XCTFail("Error fetching articles")
