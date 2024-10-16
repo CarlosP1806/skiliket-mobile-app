@@ -21,7 +21,7 @@ class SensorSelectionViewController: UIViewController {
     
     @IBAction func humidityButtonPressed(_ sender: UIButton) {
         selectedSensor = "Humidity"
-        performSegue(withIdentifier: "toGraphView", sender: self)
+        performSegue(withIdentifier: "toHumidityGraphView", sender: self)
     }
 
     @IBAction func smokeButtonPressed(_ sender: UIButton) {
@@ -44,6 +44,11 @@ class SensorSelectionViewController: UIViewController {
             if let graphVC = segue.destination as? GraphViewController {
                 graphVC.selectedSensor = selectedSensor
                 graphVC.selectedCity = selectedCity
+            }
+        } else if segue.identifier == "toHumidityGraphView" {
+            if let humidityGraphVC = segue.destination as? HumidityGraphViewController {
+                humidityGraphVC.selectedSensor = selectedSensor
+                humidityGraphVC.selectedCity = selectedCity
             }
         }
     }

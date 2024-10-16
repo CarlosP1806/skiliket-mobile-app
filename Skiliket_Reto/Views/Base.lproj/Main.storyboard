@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pxc-Dt-fav">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pxc-Dt-fav">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1963,6 +1963,7 @@
                     <navigationItem key="navigationItem" id="CB4-WN-b5h"/>
                     <connections>
                         <segue destination="zhZ-PD-BEt" kind="show" identifier="toGraphView" id="7iZ-rY-z8k"/>
+                        <segue destination="8Lk-DP-UX9" kind="show" identifier="toHumidityGraphView" id="2FK-nW-cYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAl-h8-PJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2000,7 +2001,7 @@
             <objects>
                 <viewController id="8Lk-DP-UX9" customClass="HumidityGraphViewController" customModule="Skiliket_Reto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oi1-e5-FJp">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqs-Xy-LYe">
@@ -2012,6 +2013,10 @@
                         <viewLayoutGuide key="safeArea" id="PLu-V2-pB0"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3YK-9y-354"/>
+                    <connections>
+                        <outlet property="graphContainerView" destination="hqs-Xy-LYe" id="FBj-Cr-QZ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEv-HS-yod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2442,7 +2447,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="j2o-aP-8yr">
-                                        <rect key="frame" x="15" y="10.666666666666668" width="40" height="38.666666666666657"/>
+                                        <rect key="frame" x="15" y="11" width="40" height="38.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="r6f-MS-aHt"/>
@@ -2477,7 +2482,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uYq-Je-XdU">
-                                        <rect key="frame" x="15" y="9.6666666666666679" width="40" height="40.666666666666657"/>
+                                        <rect key="frame" x="15" y="9.9999999999999964" width="40" height="40.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="14F-eN-Y7K"/>
@@ -3336,7 +3341,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XFz-7p-qf3">
-                                        <rect key="frame" x="15" y="10.666666666666668" width="40" height="38.666666666666657"/>
+                                        <rect key="frame" x="15" y="11" width="40" height="38.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="OtZ-wB-H3X"/>
@@ -3371,7 +3376,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8hJ-Gf-8v0">
-                                        <rect key="frame" x="15" y="9.6666666666666679" width="40" height="40.666666666666657"/>
+                                        <rect key="frame" x="15" y="9.9999999999999964" width="40" height="40.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="8tR-hd-6JS"/>
@@ -3657,7 +3662,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1Bf-Q9-pDB">
-                                        <rect key="frame" x="15" y="10.666666666666668" width="40" height="38.666666666666657"/>
+                                        <rect key="frame" x="15" y="11" width="40" height="38.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="68R-pW-BUU"/>
@@ -3692,7 +3697,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1jx-wq-YXx">
-                                        <rect key="frame" x="15" y="9.6666666666666679" width="40" height="40.666666666666657"/>
+                                        <rect key="frame" x="15" y="9.9999999999999964" width="40" height="40.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="0LE-0V-xcq"/>
@@ -3978,7 +3983,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Dho-s1-erM">
-                                        <rect key="frame" x="15" y="10.666666666666668" width="40" height="38.666666666666657"/>
+                                        <rect key="frame" x="15" y="11" width="40" height="38.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Mb9-XL-jHn"/>
@@ -4013,7 +4018,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tgt-wS-HFh">
-                                        <rect key="frame" x="15" y="9.6666666666666679" width="40" height="40.666666666666657"/>
+                                        <rect key="frame" x="15" y="9.9999999999999964" width="40" height="40.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="pyt-6g-o2j"/>
@@ -4216,7 +4221,7 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="report" width="225" height="225"/>
         <image name="sample_profile_pic" width="257" height="257"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="117" height="128"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <image name="text.bubble.fill.rtl" catalog="system" width="128" height="110"/>
         <image name="twitter_logo" width="90" height="90"/>
         <image name="ulo" width="584" height="328"/>
