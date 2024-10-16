@@ -71,5 +71,36 @@ final class Projects_Tests: XCTestCase {
         }
         wait(for: [expectation], timeout: 10.0)
     }
+    func testShowDetailsOfProjectFailure() async throws {
+        let expectation = self.expectation(description: "Projects fetched correctly from url")
+        do {
+            let projects = try await Project.fetchProjects(url: "http://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo4/projects_empty.json")
+            
+            XCTAssertEqual(projects.count, 0)
+            expectation.fulfill()
+        } catch {
+            XCTFail("Error fetching projects")
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    func testTableViewUpdatesAfterFetchingProjects() async throws {
+        let expectation = self.expectation(description: "Table view should be updated after fetching projects")
+
+        let projects = try await Project.fetchProjects(url: "http://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo4/projects.json")
+        
+    
+        await MainActor.run {
+            
+            projectListVC.projects = projects
+            projectListVC.projectTableView.reloadData()
+            
+            
+            XCTAssertEqual(projectListVC.projectTableView.numberOfRows(inSection: 0), projects.count, "El número de filas en la tabla debería coincidir con el número de proyectos")
+        }
+        
+        expectation.fulfill()
+        wait(for: [expectation], timeout: 10.0)
+    }
+
 
 }
