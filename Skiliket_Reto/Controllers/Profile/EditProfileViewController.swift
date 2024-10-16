@@ -129,17 +129,31 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     // Action for when the "Save" button is pressed
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         self.view.endEditing(true)
-        // Show an alert to simulate data saving
-        let alert = UIAlertController(title: "Data Saved", message: "Your changes have been saved succesfully.", preferredStyle: .alert)
         
-        // Add an action to the alert that returns to the previous view (ProfileViewController)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-            // Navigate back to ProfileViewController after saving (simulate data save)
-            self.navigationController?.popViewController(animated: true)
-        }))
-        
-        // Present the alert
-        self.present(alert, animated: true, completion: nil)
+        // Verifica si el campo de usernameTextField está vacío o contiene solo espacios en blanco
+        if titleTextField.text?.trimmingCharacters(in: .whitespaces).isEmpty == true {
+            showAlert(title: "Username Required", message: "Please enter a valid username before saving.")
+        } else {
+            // Show an alert to simulate data saving
+            let alert = UIAlertController(title: "Data Saved", message: "Your changes have been saved successfully.", preferredStyle: .alert)
+            
+            // Add an action to the alert that returns to the previous view (ProfileViewController)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                // Navigate back to ProfileViewController after saving (simulate data save)
+                self.navigationController?.popViewController(animated: true)
+            }))
+            
+            // Present the alert
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+
+    // Función para mostrar una alerta personalizada
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
 

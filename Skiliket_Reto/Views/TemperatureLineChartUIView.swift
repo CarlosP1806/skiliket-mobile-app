@@ -29,7 +29,7 @@ struct TemperatureLineChartUIView: View {
                     .foregroundStyle(Color.green) // Line in green
                 }
             }
-            .chartYScale(domain: 60...110)
+            .chartYScale(domain: 0...30)
             .chartXAxis {
                 AxisMarks(values: .automatic) { value in
                     AxisGridLine().foregroundStyle(Color.white) // White grid lines for x-axis
