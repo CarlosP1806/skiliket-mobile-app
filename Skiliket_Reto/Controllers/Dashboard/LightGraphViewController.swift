@@ -34,7 +34,7 @@ class LightGraphViewController: UIViewController {
 
     func loadGraph(sensor: String, city: String) {
         // Crear la vista de la gráfica y asignarla al contenedor
-        let graphView = UIHostingController(rootView: LightLineChartUIView(lightData: lightData))
+        let graphView = UIHostingController(rootView: LightChartUIView(lightData: lightData))
         addChild(graphView)
         graphView.view.frame = graphContainerView.bounds
         graphContainerView.addSubview(graphView.view)
@@ -83,7 +83,7 @@ class LightGraphViewController: UIViewController {
     // Actualiza la vista de la gráfica con los nuevos datos
     func updateGraph() {
         // Volver a cargar la vista de la gráfica con los datos actualizados
-        let graphView = UIHostingController(rootView: LightLineChartUIView(lightData: lightData))
+        let graphView = UIHostingController(rootView: LightChartUIView(lightData: lightData))
         for subview in graphContainerView.subviews {
             subview.removeFromSuperview()
         }
