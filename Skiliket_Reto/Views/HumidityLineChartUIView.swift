@@ -9,62 +9,55 @@ import SwiftUI
 import Charts
 
 struct HumidityLineChartUIView: View {
-    var humidityData: [Humidity]
-    @State private var selectedReading: Humidity?
-    
+    @ObservedObject var humidityData: HumidityData
+
     var body: some View {
-        VStack{
-            Text("Humidity")
-                .font(.title)
-                .padding()
-            
+        VStack {
+            // Single white header
+            Text("Humidity Levels (%)")
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding(.top, 10)
+
+            // Chart view with black background, blue line, and white axis
             Chart {
-                ForEach(humidityData) { reading in
+                ForEach(humidityData.humidities, id: \.timeStamp) { humidity in
                     LineMark(
-                        x: .value("Time", reading.timeStamp),
-                        y: .value("Humidity", Double(reading.value) ?? 0.0)
+                        x: .value("Time", humidity.timeStamp, unit: .second),
+                        y: .value("Humidity", Double(humidity.value) ?? 0)
                     )
-                    .interpolationMethod(.catmullRom)
+                    .foregroundStyle(Color.green) // Line in blue for humidity
                 }
             }
-            .chartYScale(domain: 0...100)
-            .chartXAxisLabel("Date&time", position: .bottom)
-            .chartYAxisLabel("°Celsius", position: .leading)
-            .padding()
-            .chartOverlay { proxy in
-                GeometryReader { geo in
-                    Rectangle().fill(Color.clear).contentShape(Rectangle())
-                        .gesture(
-                            DragGesture()
-                                .onChanged { value in
-                                    let location = value.location
-                                    if let date: Date = proxy.value(atX: location.x),
-                                       let closestReading = humidityData.min(by: {
-                                           abs($0.timeStamp.timeIntervalSince(date)) <
-                                           abs($1.timeStamp.timeIntervalSince(date))
-                                       }) {
-                                        selectedReading = closestReading
-                                    }
-                                }
-                        )
+            .chartYScale(domain: 60...80)  // Humidity typically ranges from 0 to 100%
+            .chartXAxis {
+                AxisMarks(values: .automatic) { value in
+                    AxisGridLine().foregroundStyle(Color.white) // White grid lines for x-axis
+                    AxisTick().foregroundStyle(Color.white) // White tick marks for x-axis
+                    AxisValueLabel(format: .dateTime.second())
+                        .foregroundStyle(Color.white) // White x-axis labels
                 }
             }
-                        
-            if let selectedReading = selectedReading {
-                Text("Temperature: \(selectedReading.value) °C")
-                    .font(.headline)
-                Text("Date: \(selectedReading.timeStamp.formatted(date: .numeric, time: .shortened))")
-                    .font(.subheadline)
-                    .padding(.top, 4)
+            .chartYAxis {
+                AxisMarks(values: .automatic) { value in
+                    AxisGridLine().foregroundStyle(Color.white) // White grid lines for y-axis
+                    AxisTick().foregroundStyle(Color.white) // White tick marks for y-axis
+                    AxisValueLabel()
+                        .foregroundStyle(Color.white) // White y-axis labels
+                }
             }
+            .frame(maxWidth: .infinity, maxHeight: 300)
+            .padding([.leading, .trailing], 16) // Add padding to prevent cutting off the chart
+            .background(Color.black) // Black background for the chart area
+
+            // X-Axis title
+            Text("Time (Seconds)")
+                .font(.caption) // Smaller font size for axis title
+                .foregroundColor(.white)
+                .padding(.top, 8) // Add some space between the chart and the title
         }
+        .background(Color.black) // Black background for the entire view
     }
 }
 
-#Preview {
-    HumidityLineChartUIView(humidityData: [
-        Humidity(value: "22.0", timeStamp: Date().addingTimeInterval(-3600)),
-        Humidity(value: "23.5", timeStamp: Date().addingTimeInterval(-1800)),
-        Humidity(value: "24.0", timeStamp: Date())
-    ])
-}
+

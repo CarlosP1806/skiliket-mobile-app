@@ -7,14 +7,15 @@
 
 import Foundation
 
+// Model for decoding JSON humidity data with decimals
 class HumidityPT: Codable {
-    let humidity: Int
+    let humidity: Double  // Change to Double to support decimals
 
     enum CodingKeys: String, CodingKey {
         case humidity = "Humidity"
     }
-    
-    init(humidity: Int) {
+
+    init(humidity: Double) {  // Change constructor to accept Double
         self.humidity = humidity
     }
 }

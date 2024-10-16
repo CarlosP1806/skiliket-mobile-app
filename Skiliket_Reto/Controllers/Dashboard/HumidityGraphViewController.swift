@@ -14,13 +14,13 @@ class HumidityGraphViewController: UIViewController {
 
     @IBOutlet weak var graphContainerView: UIView!
 
-    // Arreglo para almacenar las lecturas de humedad
-    var humidityData: [Humidity] = []
+    // Create an instance of HumidityData (ObservableObject)
+    var humidityData = HumidityData()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Verificar que los valores seleccionados no sean nil
+        // Ensure sensor and city values are not nil
         guard let sensor = selectedSensor, let city = selectedCity else {
             print("Error: selectedSensor or selectedCity is nil")
             return
@@ -28,30 +28,44 @@ class HumidityGraphViewController: UIViewController {
 
         title = "\(sensor) in \(city)"
         
-        // Iniciar la carga de datos y actualización de la gráfica
+        // Load and initialize the graph
         loadGraph(sensor: sensor, city: city)
     }
 
     func loadGraph(sensor: String, city: String) {
-        // Crear la vista de la gráfica y asignarla al contenedor
+        // Create the graph view and add it to the container
         let graphView = UIHostingController(rootView: HumidityLineChartUIView(humidityData: humidityData))
         addChild(graphView)
-        graphView.view.frame = graphContainerView.bounds
+        
+        // Set the hosting controller's view background to black
+        graphView.view.backgroundColor = .black
+        
+        // Make sure the graphView matches the container's bounds
+        graphView.view.translatesAutoresizingMaskIntoConstraints = false
         graphContainerView.addSubview(graphView.view)
+        
+        // Pin the graphView's edges to the graphContainerView's edges
+        NSLayoutConstraint.activate([
+            graphView.view.leadingAnchor.constraint(equalTo: graphContainerView.leadingAnchor),
+            graphView.view.trailingAnchor.constraint(equalTo: graphContainerView.trailingAnchor),
+            graphView.view.topAnchor.constraint(equalTo: graphContainerView.topAnchor),
+            graphView.view.bottomAnchor.constraint(equalTo: graphContainerView.bottomAnchor)
+        ])
+        
         graphView.didMove(toParent: self)
         
-        // Iniciar el censo de datos
+        // Start fetching the data
         startDataCensus(sensor: sensor, city: city, updateInterval: 5.0)
     }
 
-    // Función para iniciar el censo de datos periódicamente
+    // Function to start periodic data fetching
     func startDataCensus(sensor: String, city: String, updateInterval: TimeInterval) {
         Timer.scheduledTimer(withTimeInterval: updateInterval, repeats: true) { timer in
             self.fetchData(sensor: sensor, city: city)
         }
     }
 
-    // Función que obtiene los datos del sensor
+    // Function to fetch sensor data from the server
     func fetchData(sensor: String, city: String) {
         let urlString = "http://localhost:8765/\(city)/\(sensor)"
         guard let url = URL(string: urlString) else {
@@ -68,28 +82,15 @@ class HumidityGraphViewController: UIViewController {
             do {
                 let humidityPT = try JSONDecoder().decode(HumidityPT.self, from: data)
                 let newHumidity = Humidity(value: String(humidityPT.humidity), timeStamp: Date())
-                
-                // Agregar la nueva humedad a los datos y actualizar la gráfica
+
+                // Add the new humidity to the data array
                 DispatchQueue.main.async {
-                    self.humidityData.append(newHumidity)
-                    self.updateGraph()
+                    self.humidityData.addHumidity(newHumidity)
                 }
             } catch {
                 print("Error decoding data: \(error)")
             }
         }.resume()
     }
-
-    // Actualiza la vista de la gráfica con los nuevos datos
-    func updateGraph() {
-        // Volver a cargar la vista de la gráfica con los datos actualizados
-        let graphView = UIHostingController(rootView: HumidityLineChartUIView(humidityData: humidityData))
-        for subview in graphContainerView.subviews {
-            subview.removeFromSuperview()
-        }
-        addChild(graphView)
-        graphView.view.frame = graphContainerView.bounds
-        graphContainerView.addSubview(graphView.view)
-        graphView.didMove(toParent: self)
-    }
 }
+

@@ -14,7 +14,7 @@ struct TemperatureLineChartUIView: View {
     var body: some View {
         VStack {
             // Single white header
-            Text("Temperature in Monterrey (°F)")
+            Text("Temperature (°C)")
                 .font(.headline)
                 .foregroundColor(.white)
                 .padding(.top, 10)
