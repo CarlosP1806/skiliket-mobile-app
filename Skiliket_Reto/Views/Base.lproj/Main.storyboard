@@ -1836,7 +1836,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Guadalajara"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Guadalajara">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="guadalajaraButtonPressed:" destination="1JN-xv-CQt" eventType="touchUpInside" id="cgD-ed-aax"/>
                                 </connections>
@@ -1846,7 +1848,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Monterrey"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Monterrey">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="monterreyButtonPressed:" destination="1JN-xv-CQt" eventType="touchUpInside" id="aNX-aw-ner"/>
                                 </connections>
@@ -1856,7 +1860,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Toronto"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Toronto">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="torontoButtonPressed:" destination="1JN-xv-CQt" eventType="touchUpInside" id="X1h-h0-spw"/>
                                 </connections>
@@ -1866,7 +1872,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="CDMX"/>
+                                <buttonConfiguration key="configuration" style="filled" title="CDMX">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="cdmxButtonPressed:" destination="1JN-xv-CQt" eventType="touchUpInside" id="YWA-Ox-f45"/>
                                 </connections>
@@ -1904,7 +1912,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Humidity"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Humidity">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="humidityButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="fa8-qD-ACa"/>
                                 </connections>
@@ -1914,7 +1924,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sound"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sound">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="soundButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="jh4-2I-sIS"/>
                                     <segue destination="hcp-nO-zrR" kind="show" identifier="toSoundGraphView" id="Hz6-gF-x7Q"/>
@@ -1925,7 +1937,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Smoke"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Smoke">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="smokeButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="reO-og-ig7"/>
                                     <segue destination="IfZ-7q-lSU" kind="show" identifier="toSmokeGraphView" id="X4c-BB-GIV"/>
@@ -1936,7 +1950,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Light"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Light">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="lightButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="V73-NX-Z0e"/>
                                     <segue destination="4h4-CK-I8u" kind="show" identifier="toLightGraphView" id="VYE-Sy-NII"/>
@@ -1947,7 +1963,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Temperature"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Temperature">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="temperatureButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="2ml-m1-fcj"/>
                                 </connections>
@@ -1982,7 +2000,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9NW-Hf-iCJ">
-                                <rect key="frame" x="32" y="130" width="328" height="639"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="740"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -4218,7 +4236,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kFx-QQ-fVf">
-                                <rect key="frame" x="32" y="107" width="330" height="640"/>
+                                <rect key="frame" x="0.0" y="56" width="393" height="737"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -4273,6 +4291,7 @@
         <segue reference="dAD-bY-5fu"/>
         <segue reference="1vv-Fs-LkX"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" systemColor="systemGreenColor"/>
     <resources>
         <image name="article_banner_3" width="311" height="162"/>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
