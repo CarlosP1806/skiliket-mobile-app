@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 class HumidityData: ObservableObject {
-<<<<<<< HEAD
     @Published var humidities: [Humidity] = []
     
     func addHumidity(_ humidity: Humidity) {
@@ -19,4 +18,5 @@ class HumidityData: ObservableObject {
         }
     }
 }
+
 
