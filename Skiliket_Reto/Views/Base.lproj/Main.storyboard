@@ -2026,9 +2026,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqs-Xy-LYe">
-                                <rect key="frame" x="32" y="130" width="330" height="640"/>
+                                <rect key="frame" x="0.0" y="56" width="393" height="714"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PLu-V2-pB0"/>
@@ -2041,7 +2041,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEv-HS-yod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6508" y="373"/>
+            <point key="canvasLocation" x="6507.6335877862593" y="372.53521126760563"/>
         </scene>
         <!--Smoke Graph View Controller-->
         <scene sceneID="r58-Pq-JMY">
@@ -4281,7 +4281,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eig-GI-4Kr"/>
         <segue reference="dqC-xc-AdK"/>
         <segue reference="d1r-lr-r9g"/>
         <segue reference="dpy-Pz-539"/>

@@ -15,8 +15,7 @@ class HumidityGraphViewController: UIViewController {
     @IBOutlet weak var graphContainerView: UIView!
 
     // Arreglo para almacenar las lecturas de humedad
-    var humidityData: [Humidity] = []
-
+    var humidityData = HumidityData()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,8 +32,10 @@ class HumidityGraphViewController: UIViewController {
     }
 
     func loadGraph(sensor: String, city: String) {
+        
         // Crear la vista de la gráfica y asignarla al contenedor
         let graphView = UIHostingController(rootView: HumidityLineChartUIView(humidityData: humidityData))
+        graphView.view.backgroundColor = .black
         addChild(graphView)
         graphView.view.frame = graphContainerView.bounds
         graphContainerView.addSubview(graphView.view)
@@ -71,8 +72,7 @@ class HumidityGraphViewController: UIViewController {
                 
                 // Agregar la nueva humedad a los datos y actualizar la gráfica
                 DispatchQueue.main.async {
-                    self.humidityData.append(newHumidity)
-                    self.updateGraph()
+                    self.humidityData.addHumidity(newHumidity)
                 }
             } catch {
                 print("Error decoding data: \(error)")
