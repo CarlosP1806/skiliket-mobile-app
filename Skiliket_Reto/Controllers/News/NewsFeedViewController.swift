@@ -22,7 +22,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         
         Task {
             do {
-                self.articles = try await Article.fetchArticles()
+                self.articles = try await Article.fetchArticles(url: "http://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo4/news.json")
                 newsTableView.reloadData()
                 print(articles)
             }

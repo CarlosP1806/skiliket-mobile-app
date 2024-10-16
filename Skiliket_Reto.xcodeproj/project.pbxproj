@@ -26,6 +26,8 @@
 		075810E42CB9FC6F00BF44A1 /* TicketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075810E32CB9FC6F00BF44A1 /* TicketResponse.swift */; };
 		075810E62CB9FC8C00BF44A1 /* HostJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075810E52CB9FC8C00BF44A1 /* HostJSON.swift */; };
 		075810E82CBA121300BF44A1 /* NetworkHostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075810E72CBA121300BF44A1 /* NetworkHostDetailViewController.swift */; };
+		079519362CBF461E008A723C /* Skiliket_Reto_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079519352CBF461E008A723C /* Skiliket_Reto_Tests.swift */; };
+		0795193D2CBF47CE008A723C /* News_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0795193C2CBF47CE008A723C /* News_Tests.swift */; };
 		07CCC6D52CB385D7004C5C12 /* ReportArticleModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCC6D42CB385D7004C5C12 /* ReportArticleModalViewController.swift */; };
 		07CCC6D72CB3A282004C5C12 /* CreateArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCC6D62CB3A282004C5C12 /* CreateArticleViewController.swift */; };
 		5B442B732CB4B4B200B15CE6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B442B722CB4B4B200B15CE6 /* Profile.swift */; };
@@ -64,6 +66,16 @@
 		B9F8FCE12CBF1E2500A2007E /* SoundGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCE02CBF1E2500A2007E /* SoundGraphViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		079519372CBF461E008A723C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0706D4322CAF660100642708 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0706D4392CAF660100642708;
+			remoteInfo = Skiliket_Reto;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0706D43A2CAF660100642708 /* Skiliket_Reto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skiliket_Reto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0706D43D2CAF660100642708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +98,9 @@
 		075810E32CB9FC6F00BF44A1 /* TicketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketResponse.swift; sourceTree = "<group>"; };
 		075810E52CB9FC8C00BF44A1 /* HostJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostJSON.swift; sourceTree = "<group>"; };
 		075810E72CBA121300BF44A1 /* NetworkHostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHostDetailViewController.swift; sourceTree = "<group>"; };
+		079519332CBF461E008A723C /* Skiliket_Reto_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Skiliket_Reto_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		079519352CBF461E008A723C /* Skiliket_Reto_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skiliket_Reto_Tests.swift; sourceTree = "<group>"; };
+		0795193C2CBF47CE008A723C /* News_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News_Tests.swift; sourceTree = "<group>"; };
 		07CCC6D42CB385D7004C5C12 /* ReportArticleModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportArticleModalViewController.swift; sourceTree = "<group>"; };
 		07CCC6D62CB3A282004C5C12 /* CreateArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateArticleViewController.swift; sourceTree = "<group>"; };
 		5B442B722CB4B4B200B15CE6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -132,6 +147,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		079519302CBF461E008A723C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -139,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				0706D43C2CAF660100642708 /* Skiliket_Reto */,
+				079519342CBF461E008A723C /* Skiliket_Reto_Tests */,
 				0706D43B2CAF660100642708 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				0706D43A2CAF660100642708 /* Skiliket_Reto.app */,
+				079519332CBF461E008A723C /* Skiliket_Reto_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,6 +289,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		079519342CBF461E008A723C /* Skiliket_Reto_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				079519352CBF461E008A723C /* Skiliket_Reto_Tests.swift */,
+				0795193C2CBF47CE008A723C /* News_Tests.swift */,
+			);
+			path = Skiliket_Reto_Tests;
+			sourceTree = "<group>";
+		};
 		5B442B7C2CB5EC8800B15CE6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +403,24 @@
 			productReference = 0706D43A2CAF660100642708 /* Skiliket_Reto.app */;
 			productType = "com.apple.product-type.application";
 		};
+		079519322CBF461E008A723C /* Skiliket_Reto_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0795193B2CBF461F008A723C /* Build configuration list for PBXNativeTarget "Skiliket_Reto_Tests" */;
+			buildPhases = (
+				0795192F2CBF461E008A723C /* Sources */,
+				079519302CBF461E008A723C /* Frameworks */,
+				079519312CBF461E008A723C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				079519382CBF461E008A723C /* PBXTargetDependency */,
+			);
+			name = Skiliket_Reto_Tests;
+			productName = Skiliket_Reto_Tests;
+			productReference = 079519332CBF461E008A723C /* Skiliket_Reto_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -382,6 +433,10 @@
 				TargetAttributes = {
 					0706D4392CAF660100642708 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					079519322CBF461E008A723C = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 0706D4392CAF660100642708;
 					};
 				};
 			};
@@ -399,6 +454,7 @@
 			projectRoot = "";
 			targets = (
 				0706D4392CAF660100642708 /* Skiliket_Reto */,
+				079519322CBF461E008A723C /* Skiliket_Reto_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -411,6 +467,13 @@
 				0706D4472CAF660200642708 /* Assets.xcassets in Resources */,
 				0706D44A2CAF660200642708 /* Base in Resources */,
 				0706D4452CAF660100642708 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		079519312CBF461E008A723C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +539,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0795192F2CBF461E008A723C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0795193D2CBF47CE008A723C /* News_Tests.swift in Sources */,
+				079519362CBF461E008A723C /* Skiliket_Reto_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		079519382CBF461E008A723C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0706D4392CAF660100642708 /* Skiliket_Reto */;
+			targetProxy = 079519372CBF461E008A723C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0706D4432CAF660100642708 /* Main.storyboard */ = {
@@ -671,6 +751,40 @@
 			};
 			name = Release;
 		};
+		079519392CBF461E008A723C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "carlospaez.Skiliket-Reto-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skiliket_Reto.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Skiliket_Reto";
+			};
+			name = Debug;
+		};
+		0795193A2CBF461E008A723C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "carlospaez.Skiliket-Reto-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skiliket_Reto.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Skiliket_Reto";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -688,6 +802,15 @@
 			buildConfigurations = (
 				0706D44F2CAF660200642708 /* Debug */,
 				0706D4502CAF660200642708 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0795193B2CBF461F008A723C /* Build configuration list for PBXNativeTarget "Skiliket_Reto_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				079519392CBF461E008A723C /* Debug */,
+				0795193A2CBF461E008A723C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
