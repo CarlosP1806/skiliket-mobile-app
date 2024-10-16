@@ -11,6 +11,10 @@ import XCTest
 var newsFeedVC: NewsFeedViewController!
 var numberOfNewsFetched = 4
 
+var firstArticleAuthor = "John Doe"
+var firstArticleDate = "2020-09-01"
+var firstArticleTitle = "Increment of wildfires in California"
+
 final class News_Tests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -52,5 +56,20 @@ final class News_Tests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
-    
+    func testShowDetailsOfArticleSuccess() async throws {
+        let expectation = self.expectation(description: "Articles fetched correctly from url")
+        do {
+            let articles = try await Article.fetchArticles(url: "http://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo4/news.json")
+            
+            let firstArticle = articles[0]
+            
+            XCTAssertEqual(firstArticle.author.name, firstArticleAuthor)
+            XCTAssertEqual(firstArticle.date, firstArticleDate)
+            XCTAssertEqual(firstArticle.title, firstArticleTitle)
+            expectation.fulfill()
+        } catch {
+            XCTFail("Error fetching articles")
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
 }
