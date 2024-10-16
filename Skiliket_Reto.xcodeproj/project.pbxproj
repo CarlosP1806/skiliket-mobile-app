@@ -33,6 +33,7 @@
 		5B442B732CB4B4B200B15CE6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B442B722CB4B4B200B15CE6 /* Profile.swift */; };
 		5B442B7A2CB5EBC500B15CE6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B442B792CB5EBC500B15CE6 /* ProfileViewController.swift */; };
 		5B679E3C2CB61C19000E0822 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B679E3B2CB61C19000E0822 /* EditProfileViewController.swift */; };
+		5B8B04752CBFA95D0035B25A /* TemperatureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B04742CBFA95D0035B25A /* TemperatureData.swift */; };
 		5BA97F2F2CBCC51C00096985 /* NetworkHealthJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA97F2E2CBCC51C00096985 /* NetworkHealthJSON.swift */; };
 		5BA97F312CBCD27700096985 /* NetworkHealthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA97F302CBCD27700096985 /* NetworkHealthChartView.swift */; };
 		5BA97F332CBD0B4800096985 /* NetworkClientsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA97F322CBD0B4800096985 /* NetworkClientsChartView.swift */; };
@@ -106,6 +107,7 @@
 		5B442B722CB4B4B200B15CE6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5B442B792CB5EBC500B15CE6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5B679E3B2CB61C19000E0822 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		5B8B04742CBFA95D0035B25A /* TemperatureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureData.swift; sourceTree = "<group>"; };
 		5BA97F2E2CBCC51C00096985 /* NetworkHealthJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHealthJSON.swift; sourceTree = "<group>"; };
 		5BA97F302CBCD27700096985 /* NetworkHealthChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHealthChartView.swift; sourceTree = "<group>"; };
 		5BA97F322CBD0B4800096985 /* NetworkClientsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientsChartView.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			children = (
 				B96BED5C2CBDE00E008A5CEF /* Temperature.swift */,
 				B96BED5E2CBDE023008A5CEF /* TemperaturePT.swift */,
+				5B8B04742CBFA95D0035B25A /* TemperatureData.swift */,
 			);
 			path = Temperature;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				6134AE242CB2E744002FD3CF /* Project.swift in Sources */,
 				6134AE2A2CB44946002FD3CF /* CreateReportViewController.swift in Sources */,
 				072943732CB3717E007A73A4 /* ArticleModalViewController.swift in Sources */,
+				5B8B04752CBFA95D0035B25A /* TemperatureData.swift in Sources */,
 				615824B02CBCF16800E65D34 /* DeviceJSON.swift in Sources */,
 				B9F8FCCB2CBEFF3D00A2007E /* Humidity.swift in Sources */,
 				B96BED5F2CBDE023008A5CEF /* TemperaturePT.swift in Sources */,

@@ -9,86 +9,59 @@ import SwiftUI
 import Charts
 
 struct TemperatureLineChartUIView: View {
-    var temperatureData: [Temperature]
-    @State private var selectedReading: Temperature?
-    
+    @ObservedObject var temperatureData: TemperatureData
+
     var body: some View {
-        VStack{
-            Text("Temperature")
-                .font(.title)
+        VStack {
+            // Single white header
+            Text("Temperature in Monterrey (°F)")
+                .font(.headline)
                 .foregroundColor(.white)
-                .padding()
-            
-            let filledTemperatureData = Array(fillDataWithDefaults(temperatureData).suffix(4))
-            
+                .padding(.top, 10)
+
+            // Chart view with black background, green line, and white axis
             Chart {
-                ForEach(temperatureData) { reading in
+                ForEach(temperatureData.temperatures, id: \.timeStamp) { temp in
                     LineMark(
-                        x: .value("Time", reading.timeStamp),
-                        y: .value("Temperature", Double(reading.value) ?? 0.0)
+                        x: .value("Time", temp.timeStamp, unit: .second),
+                        y: .value("Temperature", Double(temp.value) ?? 0)
                     )
-                    .interpolationMethod(.catmullRom)
-                    .foregroundStyle(reading.value < "50.0" ? Color.blue : Color.red)
+                    .foregroundStyle(Color.green) // Line in green
                 }
             }
-            .chartYScale(domain: calculateYAxisRange(from: filledTemperatureData))
-            .chartXAxisLabel("Date & time", position: .bottom)
-            .chartYAxisLabel("Temperature °Celsius", position: .leading)
-            .padding()
-            .chartOverlay { proxy in
-                GeometryReader { geo in
-                    Rectangle().fill(Color.clear).contentShape(Rectangle())
-                        .gesture(
-                            DragGesture()
-                                .onChanged { value in
-                                    let location = value.location
-                                    if let date: Date = proxy.value(atX: location.x),
-                                       let closestReading = filledTemperatureData.min(by: {
-                                           abs($0.timeStamp.timeIntervalSince(date)) <
-                                           abs($1.timeStamp.timeIntervalSince(date))
-                                       }) {
-                                        selectedReading = closestReading
-                                    }
-                                }
-                        )
+            .chartYScale(domain: 60...110)
+            .chartXAxis {
+                AxisMarks(values: .automatic) { value in
+                    AxisGridLine().foregroundStyle(Color.white) // White grid lines for x-axis
+                    AxisTick().foregroundStyle(Color.white) // White tick marks for x-axis
+                    AxisValueLabel(format: .dateTime.second())
+                        .foregroundStyle(Color.white) // White x-axis labels
                 }
             }
-                        
-            if let selectedReading = selectedReading {
-                Text("Temperature: \(selectedReading.value) °C")
-                    .font(.headline)
-                Text("Date: \(selectedReading.timeStamp.formatted(date: .numeric, time: .shortened))")
-                    .font(.subheadline)
-                    .padding(.top, 4)
+            .chartYAxis {
+                AxisMarks(values: .automatic) { value in
+                    AxisGridLine().foregroundStyle(Color.white) // White grid lines for y-axis
+                    AxisTick().foregroundStyle(Color.white) // White tick marks for y-axis
+                    AxisValueLabel()
+                        .foregroundStyle(Color.white) // White y-axis labels
+                }
             }
+            .frame(maxWidth: .infinity, maxHeight: 300)
+            .padding([.leading, .trailing], 16) // Add padding to prevent cutting off the chart
+            .background(Color.black) // Black background for the chart area
+
+            // X-Axis title
+            Text("Time (Seconds)")
+                .font(.caption) // Smaller font size for axis title
+                .foregroundColor(.white)
+                .padding(.top, 8) // Add some space between the chart and the title
         }
-    }
-    // Ensure there are always at least 5 data points
-    func fillDataWithDefaults(_ data: [Temperature]) -> [Temperature] {
-        var filledData = data
-        
-        // If there are fewer than 5 entries, add default placeholder data
-        let defaultTemperature = Temperature(value: "0.0", timeStamp: Date().addingTimeInterval(-3600))
-        while filledData.count < 4 {
-            filledData.insert(defaultTemperature, at: 0)
-        }
-        
-        return filledData
-    }
-    // Calculate the Y-axis range based on the data, with a buffer
-    func calculateYAxisRange(from data: [Temperature]) -> ClosedRange<Double> {
-        let minTemperature = data.map { Double($0.value) ?? 0.0 }.min() ?? 0.0
-        let maxTemperature = data.map { Double($0.value) ?? 0.0 }.max() ?? 100.0
-        let buffer = 10.0 // Add some buffer to the Y-axis range for clarity
-        
-        return (minTemperature - buffer)...(maxTemperature + buffer)
+        .background(Color.black) // Black background for the entire view
     }
 }
 
-#Preview {
-    TemperatureLineChartUIView(temperatureData: [
-        Temperature(value: "22.0", timeStamp: Date().addingTimeInterval(-3600)),
-        Temperature(value: "23.5", timeStamp: Date().addingTimeInterval(-1800)),
-        Temperature(value: "24.0", timeStamp: Date())
-    ])
-}
+
+
+
+
+
