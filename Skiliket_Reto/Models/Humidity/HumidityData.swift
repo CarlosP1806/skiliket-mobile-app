@@ -5,17 +5,18 @@
 //  Created by Eashley Brittney Martinez Vergara on 16/10/24.
 //
 
-
 import Foundation
 import Combine
 
 class HumidityData: ObservableObject {
-    @Published var humidity_: [Humidity] = []
+    @Published var humidities: [Humidity] = []
     
     func addHumidity(_ humidity: Humidity) {
-        humidity_.append(humidity)
-        if humidity_.count > 4 {
-            humidity_.removeFirst() // Keep only the last 4 temperatures
+        humidities.append(humidity)
+        if humidities.count > 4 {
+            humidities.removeFirst() // Keep only the last 4 humidity readings
         }
     }
 }
+
+
