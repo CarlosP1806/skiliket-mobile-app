@@ -45,7 +45,6 @@
 		6134AE2A2CB44946002FD3CF /* CreateReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134AE292CB44946002FD3CF /* CreateReportViewController.swift */; };
 		6134AE2C2CB450EB002FD3CF /* CreateProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134AE2B2CB450EB002FD3CF /* CreateProjectViewController.swift */; };
 		6144F66A2CBFB0B000761130 /* Projects_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6144F6692CBFB0B000761130 /* Projects_Tests.swift */; };
-		6144F66C2CBFD73400761130 /* HumidityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6144F66B2CBFD73400761130 /* HumidityData.swift */; };
 		615824A82CBCE8FA00E65D34 /* NetworkDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615824A72CBCE8FA00E65D34 /* NetworkDeviceViewController.swift */; };
 		615824AA2CBCE90A00E65D34 /* NetworkDeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615824A92CBCE90A00E65D34 /* NetworkDeviceDetailViewController.swift */; };
 		615824B02CBCF16800E65D34 /* DeviceJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615824AF2CBCF16800E65D34 /* DeviceJSON.swift */; };
@@ -57,6 +56,7 @@
 		B96BED642CBDE667008A5CEF /* CitySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BED632CBDE667008A5CEF /* CitySelectionViewController.swift */; };
 		B96BED662CBDE69F008A5CEF /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BED652CBDE69F008A5CEF /* GraphViewController.swift */; };
 		B96BED682CBDE749008A5CEF /* TemperatureLineChartUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BED672CBDE749008A5CEF /* TemperatureLineChartUIView.swift */; };
+		B97CD55D2CC02D20008C0DE0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97CD55C2CC02D20008C0DE0 /* SignupViewController.swift */; };
 		B9F8FCCB2CBEFF3D00A2007E /* Humidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCCA2CBEFF3D00A2007E /* Humidity.swift */; };
 		B9F8FCCD2CBEFF5900A2007E /* HumidityPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCCC2CBEFF5900A2007E /* HumidityPT.swift */; };
 		B9F8FCCF2CBEFF6B00A2007E /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCCE2CBEFF6B00A2007E /* Sound.swift */; };
@@ -127,7 +127,6 @@
 		6134AE292CB44946002FD3CF /* CreateReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportViewController.swift; sourceTree = "<group>"; };
 		6134AE2B2CB450EB002FD3CF /* CreateProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewController.swift; sourceTree = "<group>"; };
 		6144F6692CBFB0B000761130 /* Projects_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects_Tests.swift; sourceTree = "<group>"; };
-		6144F66B2CBFD73400761130 /* HumidityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityData.swift; sourceTree = "<group>"; };
 		615824A72CBCE8FA00E65D34 /* NetworkDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDeviceViewController.swift; sourceTree = "<group>"; };
 		615824A92CBCE90A00E65D34 /* NetworkDeviceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDeviceDetailViewController.swift; sourceTree = "<group>"; };
 		615824AF2CBCF16800E65D34 /* DeviceJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceJSON.swift; sourceTree = "<group>"; };
@@ -139,6 +138,7 @@
 		B96BED632CBDE667008A5CEF /* CitySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionViewController.swift; sourceTree = "<group>"; };
 		B96BED652CBDE69F008A5CEF /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		B96BED672CBDE749008A5CEF /* TemperatureLineChartUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureLineChartUIView.swift; sourceTree = "<group>"; };
+		B97CD55C2CC02D20008C0DE0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		B9F8FCCA2CBEFF3D00A2007E /* Humidity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Humidity.swift; sourceTree = "<group>"; };
 		B9F8FCCC2CBEFF5900A2007E /* HumidityPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityPT.swift; sourceTree = "<group>"; };
 		B9F8FCCE2CBEFF6B00A2007E /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
@@ -343,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				B96BED592CB75C71008A5CEF /* PrivacyPolicyViewController.swift */,
+				B97CD55C2CC02D20008C0DE0 /* SignupViewController.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -552,6 +553,7 @@
 				B9F8FCCB2CBEFF3D00A2007E /* Humidity.swift in Sources */,
 				B96BED5F2CBDE023008A5CEF /* TemperaturePT.swift in Sources */,
 				072A844D2CB31C0A006C8FE0 /* ArticleViewController.swift in Sources */,
+				B97CD55D2CC02D20008C0DE0 /* SignupViewController.swift in Sources */,
 				0706D4402CAF660100642708 /* SceneDelegate.swift in Sources */,
 				5B442B732CB4B4B200B15CE6 /* Profile.swift in Sources */,
 				072A84492CB22818006C8FE0 /* NewsFeedViewController.swift in Sources */,

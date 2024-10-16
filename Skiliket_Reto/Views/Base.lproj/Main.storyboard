@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pxc-Dt-fav">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pxc-Dt-fav">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -141,7 +141,7 @@
                                             <constraint firstAttribute="width" constant="300" id="dzU-vp-nlp"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDg-1K-9yt">
                                         <rect key="frame" x="193" y="20" width="120" height="35"/>
@@ -293,10 +293,10 @@
             </objects>
             <point key="canvasLocation" x="264.8854961832061" y="1093.661971830986"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="moP-kr-hFD">
             <objects>
-                <viewController id="LqN-vx-qbF" sceneMemberID="viewController">
+                <viewController id="LqN-vx-qbF" customClass="SignupViewController" customModule="Skiliket_Reto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0wQ-Ob-52N">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,7 +379,7 @@
                                             <constraint firstAttribute="width" constant="300" id="drf-mP-OfU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
@@ -414,6 +414,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nvx-tc-vnb"/>
+                    <connections>
+                        <outlet property="cardView" destination="WO0-xC-Iup" id="6Fw-2p-9CB"/>
+                        <outlet property="loginNavButton" destination="LMz-bB-zFZ" id="jnG-H3-F04"/>
+                        <outlet property="passwordTextField" destination="o1Z-8d-URZ" id="vOz-Qw-8JF"/>
+                        <outlet property="signUp" destination="A6c-qM-hDs" id="2ue-TW-q1B"/>
+                        <outlet property="signupNavButton" destination="d2F-p9-17P" id="IAf-cl-2RJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzE-Qv-8r0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2512,7 +2519,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="j2o-aP-8yr">
-                                        <rect key="frame" x="15" y="10.666666666666668" width="40" height="38.666666666666657"/>
+                                        <rect key="frame" x="15" y="11" width="40" height="38.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="r6f-MS-aHt"/>
@@ -2547,7 +2554,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uYq-Je-XdU">
-                                        <rect key="frame" x="15" y="9.6666666666666679" width="40" height="40.666666666666657"/>
+                                        <rect key="frame" x="15" y="9.9999999999999964" width="40" height="40.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="14F-eN-Y7K"/>
@@ -3406,7 +3413,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XFz-7p-qf3">
-                                        <rect key="frame" x="15" y="10.666666666666668" width="40" height="38.666666666666657"/>
+                                        <rect key="frame" x="15" y="11" width="40" height="38.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="OtZ-wB-H3X"/>
@@ -3441,7 +3448,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8hJ-Gf-8v0">
-                                        <rect key="frame" x="15" y="9.6666666666666679" width="40" height="40.666666666666657"/>
+                                        <rect key="frame" x="15" y="9.9999999999999964" width="40" height="40.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="8tR-hd-6JS"/>
@@ -3727,7 +3734,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1Bf-Q9-pDB">
-                                        <rect key="frame" x="15" y="10.666666666666668" width="40" height="38.666666666666657"/>
+                                        <rect key="frame" x="15" y="11" width="40" height="38.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="68R-pW-BUU"/>
@@ -3762,7 +3769,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1jx-wq-YXx">
-                                        <rect key="frame" x="15" y="9.6666666666666679" width="40" height="40.666666666666657"/>
+                                        <rect key="frame" x="15" y="9.9999999999999964" width="40" height="40.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="0LE-0V-xcq"/>
@@ -4048,7 +4055,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Dho-s1-erM">
-                                        <rect key="frame" x="15" y="10.666666666666668" width="40" height="38.666666666666657"/>
+                                        <rect key="frame" x="15" y="11" width="40" height="38.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Mb9-XL-jHn"/>
@@ -4083,7 +4090,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tgt-wS-HFh">
-                                        <rect key="frame" x="15" y="9.6666666666666679" width="40" height="40.666666666666657"/>
+                                        <rect key="frame" x="15" y="9.9999999999999964" width="40" height="40.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="pyt-6g-o2j"/>
@@ -4281,10 +4288,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="bjy-br-AAY"/>
         <segue reference="dqC-xc-AdK"/>
         <segue reference="d1r-lr-r9g"/>
         <segue reference="dpy-Pz-539"/>
-        <segue reference="SaJ-Sk-BIA"/>
+        <segue reference="bLB-we-ETI"/>
         <segue reference="ggd-FI-ahW"/>
         <segue reference="uQ1-ag-lnc"/>
         <segue reference="AjV-Qf-vNi"/>
@@ -4313,7 +4321,7 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="report" width="225" height="225"/>
         <image name="sample_profile_pic" width="257" height="257"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="117" height="128"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <image name="text.bubble.fill.rtl" catalog="system" width="128" height="110"/>
         <image name="twitter_logo" width="90" height="90"/>
         <image name="ulo" width="584" height="328"/>
