@@ -1939,6 +1939,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Light"/>
                                 <connections>
                                     <action selector="lightButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="V73-NX-Z0e"/>
+                                    <segue destination="4h4-CK-I8u" kind="show" identifier="toLightGraphView" id="VYE-Sy-NII"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00e-gd-oYd">
@@ -4233,6 +4234,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLx-he-MwM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5725.9541984732823" y="372.53521126760563"/>
+        </scene>
+        <!--Light Graph View Controller-->
+        <scene sceneID="VSB-Tm-Z4N">
+            <objects>
+                <viewController id="4h4-CK-I8u" customClass="LightGraphViewController" customModule="Skiliket_Reto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rfa-eD-jKe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BtE-gF-BKt">
+                                <rect key="frame" x="32" y="130" width="330" height="640"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dF4-Xc-Ied"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wWv-mM-4kz"/>
+                    <connections>
+                        <outlet property="graphContainerView" destination="BtE-gF-BKt" id="lEG-2J-L5T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZxE-Qn-cys" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9048" y="373"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

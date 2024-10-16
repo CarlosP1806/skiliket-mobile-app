@@ -7,7 +7,7 @@
 
 import Foundation
 
-/*
+
 class LightPT: Codable {
     let light: Int
 
@@ -19,4 +19,4 @@ class LightPT: Codable {
         self.light = light
     }
 }
-*/
+

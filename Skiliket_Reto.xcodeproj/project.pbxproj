@@ -66,6 +66,8 @@
 		B9F8FCE12CBF1E2500A2007E /* SoundGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8FCE02CBF1E2500A2007E /* SoundGraphViewController.swift */; };
 		B9FF5ED22CBF670600BBB80A /* SmokeLineChartUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF5ED12CBF670600BBB80A /* SmokeLineChartUIView.swift */; };
 		B9FF5ED42CBF71A400BBB80A /* SmokeGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF5ED32CBF71A300BBB80A /* SmokeGraphViewController.swift */; };
+		B9FF5ED62CBF7FCF00BBB80A /* LightLineChartUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF5ED52CBF7FCF00BBB80A /* LightLineChartUIView.swift */; };
+		B9FF5ED82CBF806D00BBB80A /* LightGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF5ED72CBF806D00BBB80A /* LightGraphViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +143,8 @@
 		B9F8FCE02CBF1E2500A2007E /* SoundGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundGraphViewController.swift; sourceTree = "<group>"; };
 		B9FF5ED12CBF670600BBB80A /* SmokeLineChartUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeLineChartUIView.swift; sourceTree = "<group>"; };
 		B9FF5ED32CBF71A300BBB80A /* SmokeGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeGraphViewController.swift; sourceTree = "<group>"; };
+		B9FF5ED52CBF7FCF00BBB80A /* LightLineChartUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightLineChartUIView.swift; sourceTree = "<group>"; };
+		B9FF5ED72CBF806D00BBB80A /* LightGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightGraphViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,8 +223,9 @@
 				5BA97F322CBD0B4800096985 /* NetworkClientsChartView.swift */,
 				B96BED672CBDE749008A5CEF /* TemperatureLineChartUIView.swift */,
 				B9F8FCDA2CBF029400A2007E /* HumidityLineChartUIView.swift */,
-				B9F8FCDE2CBF1DA800A2007E /* SoundLineChartUIView.swift */,
 				B9FF5ED12CBF670600BBB80A /* SmokeLineChartUIView.swift */,
+				B9F8FCDE2CBF1DA800A2007E /* SoundLineChartUIView.swift */,
+				B9FF5ED52CBF7FCF00BBB80A /* LightLineChartUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -347,8 +352,9 @@
 				B96BED612CBDE608008A5CEF /* SensorSelectionViewController.swift */,
 				B96BED652CBDE69F008A5CEF /* GraphViewController.swift */,
 				B9F8FCDC2CBF187A00A2007E /* HumidityGraphViewController.swift */,
-				B9F8FCE02CBF1E2500A2007E /* SoundGraphViewController.swift */,
 				B9FF5ED32CBF71A300BBB80A /* SmokeGraphViewController.swift */,
+				B9F8FCE02CBF1E2500A2007E /* SoundGraphViewController.swift */,
+				B9FF5ED72CBF806D00BBB80A /* LightGraphViewController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -516,6 +522,7 @@
 				6134AE262CB4269D002FD3CF /* DetailedProjectViewController.swift in Sources */,
 				0706D45D2CB0CEB800642708 /* ResponderUtils.swift in Sources */,
 				072A844B2CB22C55006C8FE0 /* NewsArticle.swift in Sources */,
+				B9FF5ED82CBF806D00BBB80A /* LightGraphViewController.swift in Sources */,
 				B96BED562CB75875008A5CEF /* PrivacyPolicy.swift in Sources */,
 				B9F8FCDD2CBF187A00A2007E /* HumidityGraphViewController.swift in Sources */,
 				0706D4422CAF660100642708 /* ViewController.swift in Sources */,
@@ -524,6 +531,7 @@
 				6134AE2A2CB44946002FD3CF /* CreateReportViewController.swift in Sources */,
 				072943732CB3717E007A73A4 /* ArticleModalViewController.swift in Sources */,
 				615824B02CBCF16800E65D34 /* DeviceJSON.swift in Sources */,
+				B9FF5ED62CBF7FCF00BBB80A /* LightLineChartUIView.swift in Sources */,
 				B9F8FCCB2CBEFF3D00A2007E /* Humidity.swift in Sources */,
 				B96BED5F2CBDE023008A5CEF /* TemperaturePT.swift in Sources */,
 				072A844D2CB31C0A006C8FE0 /* ArticleViewController.swift in Sources */,
