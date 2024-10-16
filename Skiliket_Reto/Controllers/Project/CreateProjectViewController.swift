@@ -10,6 +10,7 @@ import UIKit
 class CreateProjectViewController: UIViewController {
     @IBOutlet weak var createNewProject: UIView!
     
+    @IBOutlet weak var createProject: UIButton!
     @IBOutlet weak var uploadImage: UIImageView!
     override func viewDidLoad() {
         createNewProject.layer.cornerRadius = 20
@@ -17,8 +18,10 @@ class CreateProjectViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showImagePickerDialog))
                 uploadImage.isUserInteractionEnabled = true
                 uploadImage.addGestureRecognizer(tapGesture)
+        createProject.addTarget(self, action: #selector(createProjectTapped), for: .touchUpInside)
 
-        // Do any additional setup after loading the view.
+        createProject.layer.cornerRadius = 10
+        createProject.layer.masksToBounds = true
     }
     @objc func showImagePickerDialog() {
         let alertController = UIAlertController(title: "Selecciona una opción", message: nil, preferredStyle: .actionSheet)
@@ -44,6 +47,16 @@ class CreateProjectViewController: UIViewController {
         // Presentar el diálogo
         present(alertController, animated: true, completion: nil)
     }
+    @objc func createProjectTapped() {
+           // Mostrar una alerta indicando que el proyecto se creó con éxito
+           let successAlert = UIAlertController(title: "Success", message: "The project was created successfully", preferredStyle: .alert)
+           
+           let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+           successAlert.addAction(okAction)
+           
+           // Presentar la alerta
+           present(successAlert, animated: true, completion: nil)
+       }
     
 
     /*

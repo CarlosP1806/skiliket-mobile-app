@@ -10,6 +10,7 @@ import UIKit
 class DetailedProjectViewController: UIViewController {
     var project: Project?
 
+    @IBOutlet weak var addReport: UIButton!
     @IBOutlet weak var detailedProjectSensors: UILabel!
     @IBOutlet weak var detailedImageView: UIImageView!
     @IBOutlet weak var detailedProjectReports: UILabel!
@@ -21,6 +22,8 @@ class DetailedProjectViewController: UIViewController {
     @IBOutlet weak var detailedProjectDescription: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        addReport.layer.cornerRadius = 10
+        addReport.layer.masksToBounds = true
         detailedView.layer.cornerRadius = 20
             detailedView.layer.masksToBounds = true // Esto asegura que el contenido no sobresalga de la vista
 
