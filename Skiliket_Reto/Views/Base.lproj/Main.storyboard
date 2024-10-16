@@ -422,7 +422,7 @@
         <!--News Feed View Controller-->
         <scene sceneID="rSH-Lu-g9U">
             <objects>
-                <viewController id="opL-ae-p14" customClass="NewsFeedViewController" customModule="Skiliket_Reto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsFeedViewController" id="opL-ae-p14" customClass="NewsFeedViewController" customModule="Skiliket_Reto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aGg-u9-6Iw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4189,6 +4189,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="dSj-Xd-OEw"/>
+        <segue reference="eig-GI-4Kr"/>
         <segue reference="dqC-xc-AdK"/>
         <segue reference="d1r-lr-r9g"/>
         <segue reference="dpy-Pz-539"/>

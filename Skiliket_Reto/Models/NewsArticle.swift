@@ -67,8 +67,8 @@ enum NewsArticleError: Error, LocalizedError {
 }
 
 extension Article {
-    static func fetchArticles() async throws -> [Article] {
-        let urlComponents = URLComponents(string: "http://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo4/news.json")!
+    static func fetchArticles(url: String) async throws -> [Article] {
+        let urlComponents = URLComponents(string: url)!
         
         let (data, response) = try await URLSession.shared.data(from: urlComponents.url!)
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
