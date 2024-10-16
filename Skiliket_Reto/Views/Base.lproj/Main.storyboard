@@ -1424,6 +1424,8 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1I-Mk-MZ3" userLabel="DetailedProjectSensor">
                                         <rect key="frame" x="9" y="430" width="313" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1438,7 +1440,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fxo-Mo-HpM">
                                         <rect key="frame" x="103" y="538" width="124" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.37892744690000002" green="0.81255918559999996" blue="0.2693920205" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Add a report " cornerStyle="capsule"/>
@@ -1465,6 +1467,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XV2-4P-nah"/>
                     <connections>
+                        <outlet property="addReport" destination="Fxo-Mo-HpM" id="KWd-eP-w4h"/>
                         <outlet property="detailedImageView" destination="EGQ-E1-diG" id="Zsu-Ef-Pgg"/>
                         <outlet property="detailedProjectDescription" destination="a9P-Rf-6Nq" id="0Db-BJ-gQN"/>
                         <outlet property="detailedProjectID" destination="6GB-yt-RQq" id="tkF-MW-ClH"/>
@@ -1520,28 +1523,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXC-05-cIB">
-                                        <rect key="frame" x="54" y="219" width="39" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Az-nD-ppy">
-                                        <rect key="frame" x="272" y="219" width="41" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHV-d6-ViF">
-                                        <rect key="frame" x="109" y="564" width="143" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.37892744690000002" green="0.81255918559999996" blue="0.2693920205" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" red="0.37892744690000002" green="0.81255918559999996" blue="0.2693920205" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Submit a report"/>
-                                    </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="33y-Dn-JZm">
                                         <rect key="frame" x="137" y="117" width="207" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1619,6 +1600,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHV-d6-ViF">
+                                        <rect key="frame" x="109" y="546" width="143" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Submit a report">
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -1628,6 +1619,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2Fl-ZQ-iqS"/>
                     <connections>
+                        <outlet property="createReport" destination="eHV-d6-ViF" id="hVI-j2-mC8"/>
                         <outlet property="createReportView" destination="Uuu-Wu-QnV" id="BQU-iX-qS7"/>
                     </connections>
                 </viewController>
@@ -1706,42 +1698,47 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeT-m1-TKZ">
                                         <rect key="frame" x="55" y="271" width="93" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.37892744690000002" green="0.81255918559999996" blue="0.2693920205" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Humidity"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Humidity">
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dR-Ah-CWh">
                                         <rect key="frame" x="166" y="269" width="130" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.37892744690000002" green="0.81255918559999996" blue="0.2693920205" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Noise"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Noise">
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxq-BV-Vwn">
                                         <rect key="frame" x="31" y="313" width="63" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.37892744690000002" green="0.81255918559999996" blue="0.2693920205" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Light"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Light">
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23v-m1-sr4">
                                         <rect key="frame" x="107" y="313" width="121" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.37892744690000002" green="0.81255918559999996" blue="0.2693920205" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Temperature"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Temperature">
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IT6-Ro-dd2">
                                         <rect key="frame" x="252" y="313" width="77" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.37892744690000002" green="0.81255918559999996" blue="0.2693920205" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Smoke"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Smoke">
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ulo" translatesAutoresizingMaskIntoConstraints="NO" id="U3Q-TD-HRe">
                                         <rect key="frame" x="60" y="430" width="240" height="128"/>
@@ -1752,10 +1749,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9G-Az-uX3">
                                         <rect key="frame" x="108" y="579" width="146" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.37892744690000002" green="0.81255918559999996" blue="0.2693920205" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" red="0.37892744690000002" green="0.81255918559999996" blue="0.2693920205" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Create a project"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Create a project">
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose an image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHB-h2-BLs">
                                         <rect key="frame" x="8" y="366" width="155" height="23"/>
@@ -1774,6 +1773,7 @@
                     <navigationItem key="navigationItem" id="SJ7-Nb-mi5"/>
                     <connections>
                         <outlet property="createNewProject" destination="OhI-3r-8Xn" id="Wl5-r2-Yhc"/>
+                        <outlet property="createProject" destination="Z9G-Az-uX3" id="0pp-X1-PVa"/>
                         <outlet property="uploadImage" destination="U3Q-TD-HRe" id="Mfn-qa-bxO"/>
                     </connections>
                 </viewController>
@@ -2077,7 +2077,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="3T6-ZZ-iPb" kind="show" id="Dbn-rh-5p4"/>
+                                    <segue destination="3T6-ZZ-iPb" kind="show" animates="NO" id="Dbn-rh-5p4"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RPz-tj-vOg">
@@ -2156,7 +2156,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="3T6-ZZ-iPb" kind="show" id="dqC-xc-AdK"/>
+                                    <segue destination="3T6-ZZ-iPb" kind="show" animates="NO" id="dqC-xc-AdK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNh-0R-pOu">
@@ -3136,7 +3136,7 @@
                                             <outlet property="hostnameLabel" destination="Pnl-IL-nRb" id="MZe-hW-fki"/>
                                             <outlet property="statusIndicator" destination="eAa-sl-DzN" id="2Ft-Pb-RNE"/>
                                             <outlet property="typeLabel" destination="iPA-bx-ret" id="GZ5-oR-ksK"/>
-                                            <segue destination="1E0-Xt-HEd" kind="show" identifier="deviceDetailSegue" id="MWs-zJ-DdE"/>
+                                            <segue destination="1E0-Xt-HEd" kind="show" identifier="deviceDetailSegue" animates="NO" id="MWs-zJ-DdE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

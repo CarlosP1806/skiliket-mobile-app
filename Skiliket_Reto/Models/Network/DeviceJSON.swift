@@ -123,9 +123,6 @@ extension DeviceData{
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
             throw DeviceDataError.DeviceNotFound
         }
-        if let jsonString = String(data: data, encoding: .utf8) {
-            print("JSON Response: \(jsonString)")
-        }
         let deviceDataInstance = try JSONDecoder().decode(DeviceData.self, from: data)
         return deviceDataInstance.respuesta
         
