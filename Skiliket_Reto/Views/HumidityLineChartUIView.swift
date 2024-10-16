@@ -19,19 +19,24 @@ struct HumidityLineChartUIView: View {
                 .foregroundColor(.white)
                 .padding(.top, 10)
 
-            // Chart view with black background, blue line, and white axis
+            // Chart view with black background, blue area, and white axis
             Chart {
                 ForEach(humidityData.humidities, id: \.timeStamp) { humidity in
-                    LineMark(
+                    // Define the AreaMark for the area chart
+                    AreaMark(
                         x: .value("Time", humidity.timeStamp, unit: .second),
                         y: .value("Humidity", Double(humidity.value) ?? 0)
                     )
-                    .foregroundStyle(Color.green) // Line in blue for humidity
+                    .foregroundStyle(LinearGradient(
+                        gradient: Gradient(colors: [Color.green.opacity(0.6), Color.green.opacity(0.1)]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )) // Blue gradient for the area
                 }
             }
-            .chartYScale(domain: 60...80)  // Humidity typically ranges from 0 to 100%
+            .chartYScale(domain: 0...100)  // Humidity typically ranges from 0 to 100%
             .chartXAxis {
-                AxisMarks(values: .automatic) { value in
+                AxisMarks(values: .automatic) {
                     AxisGridLine().foregroundStyle(Color.white) // White grid lines for x-axis
                     AxisTick().foregroundStyle(Color.white) // White tick marks for x-axis
                     AxisValueLabel(format: .dateTime.second())
@@ -39,7 +44,7 @@ struct HumidityLineChartUIView: View {
                 }
             }
             .chartYAxis {
-                AxisMarks(values: .automatic) { value in
+                AxisMarks(values: .automatic) {
                     AxisGridLine().foregroundStyle(Color.white) // White grid lines for y-axis
                     AxisTick().foregroundStyle(Color.white) // White tick marks for y-axis
                     AxisValueLabel()
@@ -59,5 +64,7 @@ struct HumidityLineChartUIView: View {
         .background(Color.black) // Black background for the entire view
     }
 }
+
+
 
 
