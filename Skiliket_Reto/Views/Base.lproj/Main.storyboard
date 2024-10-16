@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pxc-Dt-fav">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pxc-Dt-fav">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1839,7 +1839,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Guadalajara"/>
                                 <connections>
                                     <action selector="guadalajaraButtonPressed:" destination="1JN-xv-CQt" eventType="touchUpInside" id="cgD-ed-aax"/>
-                                    <segue destination="Cok-EB-HZf" kind="show" identifier="toSensorSelection" id="Lb4-U1-pea"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPY-ye-4Ip">
@@ -1850,7 +1849,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Monterrey"/>
                                 <connections>
                                     <action selector="monterreyButtonPressed:" destination="1JN-xv-CQt" eventType="touchUpInside" id="aNX-aw-ner"/>
-                                    <segue destination="Cok-EB-HZf" kind="show" identifier="toSensorSelection" id="W6t-Tt-111"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8K-wT-c8k">
@@ -1861,7 +1859,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Toronto"/>
                                 <connections>
                                     <action selector="torontoButtonPressed:" destination="1JN-xv-CQt" eventType="touchUpInside" id="X1h-h0-spw"/>
-                                    <segue destination="Cok-EB-HZf" kind="show" identifier="toSensorSelection" id="QAs-mt-mr2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xy-SF-Y0D">
@@ -1872,7 +1869,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="CDMX"/>
                                 <connections>
                                     <action selector="cdmxButtonPressed:" destination="1JN-xv-CQt" eventType="touchUpInside" id="YWA-Ox-f45"/>
-                                    <segue destination="Cok-EB-HZf" kind="show" identifier="toSensorSelection" id="B4i-K0-7dW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBY-TZ-D0a">
@@ -1887,6 +1883,9 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="2Ca-zs-KDh"/>
+                    <connections>
+                        <segue destination="Cok-EB-HZf" kind="show" identifier="toSensorSelection" id="ccZ-7Y-Luh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0G-f9-rWF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1908,7 +1907,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Humidity"/>
                                 <connections>
                                     <action selector="humidityButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="fa8-qD-ACa"/>
-                                    <segue destination="zhZ-PD-BEt" kind="show" identifier="toGraphView" id="zEl-7w-755"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xc-rT-gZF">
@@ -1919,7 +1917,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Sound"/>
                                 <connections>
                                     <action selector="soundButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="jh4-2I-sIS"/>
-                                    <segue destination="zhZ-PD-BEt" kind="show" identifier="toGraphView" id="eTk-0j-yay"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-Ed-8SG">
@@ -1930,7 +1927,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Smoke"/>
                                 <connections>
                                     <action selector="smokeButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="reO-og-ig7"/>
-                                    <segue destination="zhZ-PD-BEt" kind="show" identifier="toGraphView" id="3Ta-lB-8Ws"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOJ-Xz-xYX">
@@ -1941,7 +1937,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Light"/>
                                 <connections>
                                     <action selector="lightButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="V73-NX-Z0e"/>
-                                    <segue destination="zhZ-PD-BEt" kind="show" identifier="toGraphView" id="dSj-Xd-OEw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00e-gd-oYd">
@@ -1952,7 +1947,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Temperature"/>
                                 <connections>
                                     <action selector="temperatureButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="2ml-m1-fcj"/>
-                                    <segue destination="zhZ-PD-BEt" kind="show" identifier="toGraphView" id="5I0-9t-nkt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select sensor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uad-Ry-luL">
@@ -1967,6 +1961,9 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="CB4-WN-b5h"/>
+                    <connections>
+                        <segue destination="zhZ-PD-BEt" kind="show" identifier="toGraphView" id="7iZ-rY-z8k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAl-h8-PJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2445,7 +2442,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="j2o-aP-8yr">
-                                        <rect key="frame" x="15" y="11" width="40" height="38.666666666666671"/>
+                                        <rect key="frame" x="15" y="10.666666666666668" width="40" height="38.666666666666657"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="r6f-MS-aHt"/>
@@ -2480,7 +2477,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uYq-Je-XdU">
-                                        <rect key="frame" x="15" y="9.9999999999999964" width="40" height="40.666666666666671"/>
+                                        <rect key="frame" x="15" y="9.6666666666666679" width="40" height="40.666666666666657"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="14F-eN-Y7K"/>
@@ -3339,7 +3336,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XFz-7p-qf3">
-                                        <rect key="frame" x="15" y="11" width="40" height="38.666666666666671"/>
+                                        <rect key="frame" x="15" y="10.666666666666668" width="40" height="38.666666666666657"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="OtZ-wB-H3X"/>
@@ -3374,7 +3371,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8hJ-Gf-8v0">
-                                        <rect key="frame" x="15" y="9.9999999999999964" width="40" height="40.666666666666671"/>
+                                        <rect key="frame" x="15" y="9.6666666666666679" width="40" height="40.666666666666657"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="8tR-hd-6JS"/>
@@ -3660,7 +3657,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1Bf-Q9-pDB">
-                                        <rect key="frame" x="15" y="11" width="40" height="38.666666666666671"/>
+                                        <rect key="frame" x="15" y="10.666666666666668" width="40" height="38.666666666666657"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="68R-pW-BUU"/>
@@ -3695,7 +3692,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1jx-wq-YXx">
-                                        <rect key="frame" x="15" y="9.9999999999999964" width="40" height="40.666666666666671"/>
+                                        <rect key="frame" x="15" y="9.6666666666666679" width="40" height="40.666666666666657"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="0LE-0V-xcq"/>
@@ -3981,7 +3978,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Dho-s1-erM">
-                                        <rect key="frame" x="15" y="11" width="40" height="38.666666666666671"/>
+                                        <rect key="frame" x="15" y="10.666666666666668" width="40" height="38.666666666666657"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Mb9-XL-jHn"/>
@@ -4016,7 +4013,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tgt-wS-HFh">
-                                        <rect key="frame" x="15" y="9.9999999999999964" width="40" height="40.666666666666671"/>
+                                        <rect key="frame" x="15" y="9.6666666666666679" width="40" height="40.666666666666657"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="pyt-6g-o2j"/>
@@ -4188,12 +4185,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dSj-Xd-OEw"/>
-        <segue reference="eig-GI-4Kr"/>
         <segue reference="dqC-xc-AdK"/>
         <segue reference="d1r-lr-r9g"/>
         <segue reference="dpy-Pz-539"/>
-        <segue reference="QAs-mt-mr2"/>
         <segue reference="SaJ-Sk-BIA"/>
         <segue reference="ggd-FI-ahW"/>
         <segue reference="uQ1-ag-lnc"/>
@@ -4222,7 +4216,7 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="report" width="225" height="225"/>
         <image name="sample_profile_pic" width="257" height="257"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="117" height="128"/>
         <image name="text.bubble.fill.rtl" catalog="system" width="128" height="110"/>
         <image name="twitter_logo" width="90" height="90"/>
         <image name="ulo" width="584" height="328"/>
