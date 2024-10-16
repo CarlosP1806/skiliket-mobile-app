@@ -1917,6 +1917,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Sound"/>
                                 <connections>
                                     <action selector="soundButtonPressed:" destination="Cok-EB-HZf" eventType="touchUpInside" id="jh4-2I-sIS"/>
+                                    <segue destination="hcp-nO-zrR" kind="show" identifier="toSoundGraphView" id="Hz6-gF-x7Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-Ed-8SG">
@@ -2048,6 +2049,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAK-tr-e51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7285" y="373"/>
+        </scene>
+        <!--Sound Graph View Controller-->
+        <scene sceneID="yf7-zC-RmA">
+            <objects>
+                <viewController id="hcp-nO-zrR" customClass="SoundGraphViewController" customModule="Skiliket_Reto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qbT-zo-sMm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K2h-Lh-h6l">
+                                <rect key="frame" x="32" y="130" width="330" height="640"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Ac-LF-fS1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GM4-dk-jh4"/>
+                    <connections>
+                        <outlet property="graphContainerView" destination="K2h-Lh-h6l" id="YjG-6w-xz0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qsD-pY-3mD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8140" y="373"/>
         </scene>
         <!--Network Overview View Controller-->
         <scene sceneID="7rK-E7-6tD">

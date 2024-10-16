@@ -36,7 +36,7 @@ class SensorSelectionViewController: UIViewController {
 
     @IBAction func soundButtonPressed(_ sender: UIButton) {
         selectedSensor = "Sound"
-        performSegue(withIdentifier: "toGraphView", sender: self)
+        performSegue(withIdentifier: "toSoundGraphView", sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,6 +54,11 @@ class SensorSelectionViewController: UIViewController {
             if let smokeGraphVC = segue.destination as? SmokeGraphViewController {
                 smokeGraphVC.selectedSensor = selectedSensor
                 smokeGraphVC.selectedCity = selectedCity
+            }
+        } else if segue.identifier == "toSoundGraphView"{
+            if let soundGraphVC = segue.destination as? SoundGraphViewController {
+                soundGraphVC.selectedSensor = selectedSensor
+                soundGraphVC.selectedCity = selectedCity
             }
         }
     }

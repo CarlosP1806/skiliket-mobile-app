@@ -5,7 +5,7 @@
 //  Created by José Antonio Pacheco on 15/10/24.
 //
 
-/*
+
 import UIKit
 import SwiftUI
 
@@ -94,4 +94,4 @@ class SoundGraphViewController: UIViewController {
         graphView.didMove(toParent: self)
     }
 }
-*/
+
