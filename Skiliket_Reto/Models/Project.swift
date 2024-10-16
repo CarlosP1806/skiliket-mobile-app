@@ -5,10 +5,6 @@
 //  Created by Eashley Brittney Martinez Vergara on 06/10/24.
 //
 
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let projectData = try? JSONDecoder().decode(ProjectData.self, from: jsonData)
 
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
@@ -86,8 +82,8 @@ class Sensors: Codable {
 }
 
 extension Project {
-    static func fetchProjects() async throws -> [Project] {
-        let urlComponents = URLComponents(string: "http://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo4/projects.json")!
+    static func fetchProjects(url: String) async throws -> [Project] {
+        let urlComponents = URLComponents(string: url)!
         
         let (data, response) = try await URLSession.shared.data(from: urlComponents.url!)
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
